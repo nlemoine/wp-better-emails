@@ -1,0 +1,252 @@
+# Copyright (C) 2010 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Better Emails\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/wp-better-emails\n"
+"POT-Creation-Date: 2011-09-06 23:22:41+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2012-11-28 22:35+0100\n"
+"Last-Translator: Nicolas Lemoine <nico.lemoine@gmail.com>\n"
+"Language-Team: \n"
+"Language: it_IT\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#: wpbe-options.php:2 wpbe.php:158
+msgid "Email settings"
+msgstr "Impostazioni Email"
+
+#: wpbe-options.php:9
+msgid ""
+"Set your own sender name and email address. Default Wordpress values will be "
+"used if empty."
+msgstr ""
+"Imposta il il nome del mittente e l'indirizzo email. Se lasciato vuoto "
+"verranno utilizzati quelli di base di Wordpress."
+
+#: wpbe-options.php:12
+msgid "Name"
+msgstr "Nome"
+
+#: wpbe-options.php:16
+msgid "Email address"
+msgstr "Indirizzo email"
+
+#: wpbe-options.php:22
+msgid "HTML Template"
+msgstr "Template HTML"
+
+#: wpbe-options.php:24
+msgid "Live template preview"
+msgstr "Anteprima del template"
+
+#: wpbe-options.php:24
+msgid "Live preview"
+msgstr "Anteprima"
+
+#: wpbe-options.php:26
+msgid ""
+"Edit the HTML email template if you want to customize it. You might have a "
+"look at <a href=\"#\" id=\"wpbe_help\">help tab</a> for further information."
+msgstr ""
+"Modifica il template HTML se vuoi personalizzarlo. Consulta <a href=\"#\" id="
+"\"wpbe_help\">l'aiuto</a> per ulteriori informazioni."
+
+#: wpbe-options.php:35
+msgid "Send an email preview to"
+msgstr "Manda un'anteprima dell'email a"
+
+#: wpbe-options.php:39
+msgid "Send"
+msgstr "Invia"
+
+#: wpbe-options.php:41
+msgid "You must save your template before sending an email preview."
+msgstr "Devi salvare il template prima di spedire un'anteprima dell'email."
+
+#: wpbe-options.php:46
+msgid "Save Changes"
+msgstr "Salva le modifiche"
+
+#: wpbe-options.php:52
+msgid "Support & bug report"
+msgstr "Supporto e segnalazione degli errori"
+
+#: wpbe-options.php:53
+msgid ""
+"If you have any idea to improve this plugin or any bug to report, please "
+"email me at : <a href=\"mailto:plugins@artyshow-studio.fr?subject=[wp-better-"
+"emails]\">plugins@artyshow-studio.fr</a>"
+msgstr ""
+"Se hai delle idee per migliorare questo plugin o qualche errore da "
+"segnalare, per favore contattami presso: <a href=\"mailto:plugins@artyshow-"
+"studio.fr?subject=[wp-better-emails]\">plugins@artyshow-studio.fr</a>"
+
+#: wpbe-options.php:55
+msgid ""
+"You like this plugin ? You use it in a business context ? Please, consider a "
+"<a href=\"%s\" target=\"_blank\" rel=\"external\">donation</a>."
+msgstr ""
+"Ti piace questo plugin? Lo usi in ambito lavorativo? Per favore considera la "
+"possibilità di dare una <a href=\"%s\" target=\"_blank\" rel=\"external"
+"\">donazione</a>."
+
+#: templates/template-1.php:33
+msgid "Date"
+msgstr "Data"
+
+#: templates/template-1.php:33
+msgid "Email sent"
+msgstr "Email spedita"
+
+#: templates/template-1.php:34
+msgid "Contact"
+msgstr "Contatto"
+
+#: templates/template-1.php:34
+msgid "For any requests, please contact"
+msgstr "Per ogni necessità per favore contatta"
+
+#: wpbe.php:131
+msgid "Settings"
+msgstr "Impostazioni"
+
+#: wpbe.php:147
+msgid "WP Better Emails requires WordPress 2.8 or newer."
+msgstr "Per usare WP Better Emails è necessario Wordpress 2.8 o successivi"
+
+#: wpbe.php:147
+msgid "Upgrade your Wordpress installation."
+msgstr "Aggiorna la tua installazione di Wordpress."
+
+#: wpbe.php:158
+msgid "WP Better Emails"
+msgstr "WP Better Emails"
+
+#: wpbe.php:228
+msgid "Please enter a valid sender email address."
+msgstr "Per favore inserisci un indirizzo email valido per il mittente."
+
+#: wpbe.php:238
+msgid "Template is empty"
+msgstr "Il template è vuoto"
+
+#: wpbe.php:241
+msgid "No content tag found. The %content% tag is required in your template"
+msgstr ""
+"Non è presente alcun tag content. Il tag %content% è obbligatorio per il tuo "
+"template\""
+
+#: wpbe.php:259
+msgid "Please enter an email"
+msgstr "Per favore inserisci un indirizzo email"
+
+#: wpbe.php:261
+msgid "Please enter a valid email"
+msgstr "Per favore inserisci un indirizzo email valido"
+
+#: wpbe.php:262
+msgid "Hey !"
+msgstr "Ehi!"
+
+#: wpbe.php:264
+msgid "This is a sample email to test your HTML template."
+msgstr "Questa è una email di prova per testare il tuo template HTML."
+
+#: wpbe.php:266
+msgid ""
+"If you're not skilled in HTML/CSS email coding, I strongly recommend to "
+"leave the default template as it is. It has been tested on various and "
+"popular email clients like Gmail, Yahoo Mail, Hotmail/Live, Thunderbird, "
+"Apple Mail, Outlook, and many more."
+msgstr ""
+"Se non sei pratico nella stesura di una email utilizzando il codice HTML/"
+"CSS, ti raccomando di lasciare il template di partenza così com'è.  È stato "
+"testato su molti famosi programmi di posta come Gmail, Yahoo Mail, Hotmail/"
+"Live, Thunderbird, Apple Mail, Outlook, e altri ancora."
+
+#: wpbe.php:268
+msgid ""
+"If you have any problems or any suggestions to improve this plugin, please "
+"let me know."
+msgstr ""
+"Se hai qualche problema o qualche suggerimento per migliorare questo plugin, "
+"per favore fammelo sapere."
+
+#: wpbe.php:269
+msgid "Email template preview"
+msgstr "Anteprima del template."
+
+#: wpbe.php:270
+msgid "An email preview has been successfully sent to %s"
+msgstr "Un'anteprima dell'email è stata inviata con successo a %s"
+
+#: wpbe.php:273
+msgid ""
+"An error occured while sending email. Please check your server configuration."
+msgstr ""
+"Un errore si è verificato durante l'invio dell'email. Per favore controlla "
+"la configurazione del tuo server."
+
+#: wpbe.php:410
+msgid "Some dynamic tags can be included in your email template :"
+msgstr "Alcuni tag dinamici possono essere inclusi nel tuo template :"
+
+#: wpbe.php:412
+msgid "<strong>%content%</strong> : will be replaced with the message content."
+msgstr ""
+"<strong>%content%</strong> : verrà sostituito con il contenuto del messaggio."
+
+#: wpbe.php:413
+msgid ""
+"NOTE: The content tag is <strong>required</strong>, WP Better Emails will be "
+"automatically desactivated if no content tag is found."
+msgstr ""
+"ATTENZIONE: Il tag content è <strong>obbligatorio</strong>, WP Better Emails "
+"verrà automaticamente disattivato se non lo troverà."
+
+#: wpbe.php:414
+msgid "<strong>%blog_url%</strong> : will be replaced with your blog URL."
+msgstr "<strong>%blog_url%</strong> : verrà sostituito con l'URL del tuo blog."
+
+#: wpbe.php:415
+msgid "<strong>%home_url%</strong> : will be replaced with your home URL."
+msgstr ""
+"<strong>%home_url%</strong> : verrà sostituito con l'URL della tua home page."
+
+#: wpbe.php:416
+msgid "<strong>%blog_name%</strong> : will be replaced with your blog name."
+msgstr ""
+"<strong>%blog_name%</strong> : verrà sostituito con il titolo del tuo blog."
+
+#: wpbe.php:417
+msgid ""
+"<strong>%blog_description%</strong> : will be replaced with your blog "
+"description."
+msgstr ""
+"<strong>%blog_description%</strong> : verrà sostituito con la descrizione "
+"del tuo blog."
+
+#: wpbe.php:418
+msgid "<strong>%admin_email%</strong> : will be replaced with admin email."
+msgstr ""
+"<strong>%admin_email%</strong> : verrà sostituito con l'email "
+"dell'amministratore."
+
+#: wpbe.php:419
+msgid ""
+"<strong>%date%</strong> : will be replaced with current date, as formatted "
+"in <a href=\"options-general.php\">general options</a>."
+msgstr ""
+"<strong>%date%</strong> : verrà sostituito con la data corrente, formattata "
+"come nelle <a href=\"options-general.php\">impostazioni generali</a>."
+
+#: wpbe.php:420
+msgid ""
+"<strong>%time%</strong> : will be replaced with current time, as formatted "
+"in <a href=\"options-general.php\">general options</a>."
+msgstr ""
+"<strong>%time%</strong> : verrà sostituito con l'ora corrente, formattata "
+"come nelle <a href=\"options-general.php\">impostazioni generali</a>."

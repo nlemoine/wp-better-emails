@@ -1,0 +1,258 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Better Emails\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/wp-better-emails\n"
+"POT-Creation-Date: 2011-09-06 23:22:41+00:00\n"
+"PO-Revision-Date: 2011-09-12 17:37+0100\n"
+"Last-Translator: \n"
+"Language-Team: Team <plugins@artyshow-studio.fr>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: \n"
+"X-Poedit-Country: \n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: wpbe-options.php:2
+#: wpbe.php:161
+#@ wp-better-emails
+msgid "Email settings"
+msgstr "E-posta ayarları"
+
+#: wpbe-options.php:8
+#@ wp-better-emails
+msgid "Set your own sender name and email address. Default Wordpress values will be used if empty."
+msgstr "Kendi gönderici adı ve e-posta adresinizi ayarlayın. Eğer boş kalırsa, Wordpress'in varsayılan ayarları kullanılacaktır."
+
+#: wpbe-options.php:11
+#@ wp-better-emails
+msgid "Name"
+msgstr "Gönderici Adı"
+
+#: wpbe-options.php:15
+#@ wp-better-emails
+msgid "Email address"
+msgstr "E-Posta Adresi"
+
+#: wpbe-options.php:21
+#@ wp-better-emails
+msgid "HTML Template"
+msgstr "HTML Şablonu"
+
+#: wpbe-options.php:23
+#@ wp-better-emails
+msgid "Live template preview"
+msgstr "Canlı şablon önizleme"
+
+#: wpbe-options.php:23
+#@ wp-better-emails
+msgid "Live preview"
+msgstr "Canlı önizleme"
+
+#: wpbe-options.php:34
+#@ wp-better-emails
+msgid "Send an email preview to"
+msgstr "Deneme amaçlı önizleme e-postası gönder:"
+
+#: wpbe-options.php:38
+#@ wp-better-emails
+msgid "Send"
+msgstr "Gönder"
+
+#: wpbe-options.php:40
+#@ wp-better-emails
+msgid "You must save your template before sending an email preview."
+msgstr "Önizleme e-postası göndermeden önce şablonu kaydetmeniz gerekmektedir."
+
+#: wpbe-options.php:45
+#@ wp-better-emails
+msgid "Save Changes"
+msgstr "Değişiklikleri Kaydet"
+
+#: wpbe-options.php:50
+#@ wp-better-emails
+msgid "Support & bug report"
+msgstr "Destek ve hata raporu gönderimi"
+
+#: wpbe-options.php:51
+#@ wp-better-emails
+msgid "If you have any idea to improve this plugin or any bug to report, please email me at : <a href=\"mailto:plugins@artyshow-studio.fr?subject=[wp-better-emails]\">plugins@artyshow-studio.fr</a>"
+msgstr "Eğer bu eklentiyi geliştirmek için yeni bir fikriniz varsa, lütfen <a href=\"mailto:plugins@artyshow-studio.fr?subject=[wp-better-emails]\">plugins@artyshow-studio.fr</a> posta adresine e-posta gönderin."
+
+#: wpbe-options.php:53
+#, php-format
+#@ wp-better-emails
+msgid "You like this plugin ? You use it in a business context ? Please, consider a <a href=\"%s\" target=\"_blank\" rel=\"external\">donation</a>."
+msgstr "Bu eklentiyi beğendiniz mi?  Bu eklentiyi ticari içerik de mi kullanıyorsınuz? Lütfen  <a href=\"%s\" target=\"_blank\" rel=\"external\">bağış</a> yapmayı düşünün."
+
+#: templates/template-1.php:38
+#@ wp-better-emails
+msgid "Date"
+msgstr "Tarih"
+
+#: templates/template-1.php:38
+#@ wp-better-emails
+msgid "Email sent"
+msgstr "E-Posta Gönderilme Tarihi"
+
+#: templates/template-1.php:39
+#@ wp-better-emails
+msgid "Contact"
+msgstr "İletişim"
+
+#: templates/template-1.php:39
+#@ wp-better-emails
+msgid "For any requests, please contact"
+msgstr "Herhangi bir soru veya talebinizi yetkiliye iletebilirsiniz:"
+
+#: wpbe.php:134
+#@ wp-better-emails
+msgid "Settings"
+msgstr "Ayarlar"
+
+#: wpbe.php:150
+#@ wp-better-emails
+msgid "WP Better Emails requires WordPress 2.8 or newer."
+msgstr "WP Better Emails eklentisi WordPress 2.8 veya daha yeni bir sürüm gerektirmektedir."
+
+#: wpbe.php:150
+#@ wp-better-emails
+msgid "Upgrade your Wordpress installation."
+msgstr "Wordpress kurulumunuzu yükseltin."
+
+#: wpbe.php:161
+#@ wp-better-emails
+msgid "WP Better Emails"
+msgstr "WP Daha İyi E-Postalar"
+
+#: wpbe.php:233
+#@ wp-better-emails
+msgid "Please enter a valid sender email address."
+msgstr "Lütfen geçerli bir gönderici e-posta adresinizi girin."
+
+#: wpbe.php:243
+#@ wp-better-emails
+msgid "Template is empty"
+msgstr "Şablon boş"
+
+#: wpbe.php:246
+#, php-format
+#@ wp-better-emails
+msgid "No content tag found. The %content% tag is required in your template"
+msgstr "İçerik etiketi bulunamadı. %content% etikletini şablonunuzda kullanmak zorundasınız."
+
+#: wpbe.php:264
+#@ wp-better-emails
+msgid "Please enter an email"
+msgstr "Lütfen bir e-posta adresi girin"
+
+#: wpbe.php:266
+#@ wp-better-emails
+msgid "Please enter a valid email"
+msgstr "Lütfen geçerli bir e-posta adresi girin"
+
+#: wpbe.php:267
+#@ wp-better-emails
+msgid "Hey !"
+msgstr "Hey !"
+
+#: wpbe.php:269
+#@ wp-better-emails
+msgid "This is a sample email to test your HTML template."
+msgstr "Bu, HTML şablonu test etmek için örnek bir e-postadır."
+
+#: wpbe.php:271
+#@ wp-better-emails
+msgid "If you're not skilled in HTML/CSS email coding, I strongly recommend to leave the default template as it is. It has been tested on various and popular email clients like Gmail, Yahoo Mail, Hotmail/Live, Thunderbird, Apple Mail, Outlook, and many more."
+msgstr "HTML / CSS e-posta kodlama konusunda yetenekli değilseniz, varsayılan şablonu olduğu gibi bırakmanızı şiddetle tavsiye ediyorum. Bu şablon, Gmail, Yahoo Mail, Hotmail / Live, Thunderbird, Apple Mail, Outlook gibi çok çeşitli ve popüler e-posta istemcileri üzerinde test edilmiştir."
+
+#: wpbe.php:273
+#@ wp-better-emails
+msgid "If you have any problems or any suggestions to improve this plugin, please let me know."
+msgstr "Bu eklentiyi geliştirmek için herhangi bir sorun veya herhangi bir öneriniz varsa, lütfen bana bildirin."
+
+#: wpbe.php:275
+#@ wp-better-emails
+msgid "Email template preview"
+msgstr "E-posta şablon önizleme"
+
+#: wpbe.php:276
+#, php-format
+#@ wp-better-emails
+msgid "An email preview has been successfully sent to %s"
+msgstr "Bir e-posta önizleme %s adresine başarıyla gönderildi."
+
+#: wpbe.php:278
+#@ wp-better-emails
+msgid "An error occured while sending email. Please check your server configuration."
+msgstr "E-posta gönderirken bir hata oluştu. Sunucu yapılandırmasını kontrol edin."
+
+#: wpbe.php:415
+#@ wp-better-emails
+msgid "Some dynamic tags can be included in your email template :"
+msgstr "Bazı dinamik etiketler, e-posta şablonuna eklenebilir:"
+
+#: wpbe.php:417
+#, php-format
+#@ wp-better-emails
+msgid "<strong>%content%</strong> : will be replaced with the message content."
+msgstr "<strong>%content%</strong> mesaj içeriğiniz ile değiştirilecektir."
+
+#: wpbe.php:418
+#@ wp-better-emails
+msgid "NOTE: The content tag is <strong>required</strong>, WP Better Emails will be automatically desactivated if no content tag is found."
+msgstr "NOT: içerik etiketi <strong>gereklidir</strong>, WP Daha İyi E-Postalar eklentisi içerik etiketi olmadığı zaman otomatik olarak etkisizleştirilecektir."
+
+#: wpbe.php:419
+#, php-format
+#@ wp-better-emails
+msgid "<strong>%blog_url%</strong> : will be replaced with your blog URL."
+msgstr "<strong>%blog_url%</strong>  etiketi blog adresiniz ile değiştirilecektir."
+
+#: wpbe.php:420
+#, php-format
+#@ wp-better-emails
+msgid "<strong>%home_url%</strong> : will be replaced with your home URL."
+msgstr "<strong>%home_url%</strong>  etiketi ana sayfa adresiniz ile değiştirilecektir."
+
+#: wpbe.php:421
+#, php-format
+#@ wp-better-emails
+msgid "<strong>%blog_name%</strong> : will be replaced with your blog name."
+msgstr "<strong>%blog_name%</strong> etiketi site isminiz ile değiştirilecektir."
+
+#: wpbe.php:422
+#, php-format
+#@ wp-better-emails
+msgid "<strong>%blog_description%</strong> : will be replaced with your blog description."
+msgstr "<strong>%blog_description%</strong> etiketi site sloganınız ile değiştirilecektir."
+
+#: wpbe.php:423
+#, php-format
+#@ wp-better-emails
+msgid "<strong>%admin_email%</strong> : will be replaced with admin email."
+msgstr "<strong>%admin_email%</strong> etiketi yönetici e-posta adresi ile değiştirilecektir."
+
+#: wpbe.php:424
+#, php-format
+#@ wp-better-emails
+msgid "<strong>%date%</strong> : will be replaced with current date, as formatted in <a href=\"options-general.php\">general options</a>."
+msgstr "<strong>%date%</strong> etiketi şu anki tarih ile değiştirilecektir. <a href=\"options-general.php\">Genel Ayarlar</a>'daki tarih biçimi kullanılacaktır."
+
+#: wpbe.php:425
+#, php-format
+#@ wp-better-emails
+msgid "<strong>%time%</strong> : will be replaced with current time, as formatted in <a href=\"options-general.php\">general options</a>."
+msgstr "<strong>%time%</strong> etiketi şu anki saat ile değiştirilecektir. <a href=\"options-general.php\">Genel Ayarlar</a>'daki saat biçimi kullanılacaktır."
+
+#: wpbe-options.php:26
+#@ wp-better-emails
+msgid "Edit the HTML email template if you want to customize it. You might have a look at the <a href=\"#\" id=\"wpbe_help\">help tab</a> for further information."
+msgstr "HTML şablonunu değiştirmek isterseniz burada düzenleyebilirsiniz.Daha ayrıntılı bilgi için <a href=\"#\" id=\"wpbe_help\">Yardım Sekmesi</a>ne bakabilirsiniz."
+
