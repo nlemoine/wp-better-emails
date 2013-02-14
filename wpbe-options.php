@@ -29,6 +29,13 @@
 			<?php $this->template_editor() ?>
 		</div>
 
+		<!-- Plain-text template -->
+		<h3 class="wpbe_title"><?php _e('Plain-text Template', 'wp-better-emails'); ?></h3>
+		<p><?php _e('Edit the plain-text template if you want to customize it. You might have a look at the <a href="#" class="wpbe_help">help tab</a> for further information.', 'wp-better-emails'); ?></p>
+		<div id="wpbe_plaintext_template_container">
+			<?php $this->plaintext_template_editor(); ?>
+		</div>
+
 		<!-- Preview -->
 		<h3 class="wpbe_title"><?php _e('Preview', 'wp-better-emails'); ?></h3>
 		<div id="wpbe_preview_message"></div>
