@@ -394,22 +394,34 @@ For any requests, please contact %admin_email%';
 		}
 
 		/**
-		 * Add the email template and set it multipart
+		 * Add the email template and set it as multipart.
 		 *
 		 * @since 0.1
 		 * @param object $phpmailer
 		 */
-		function send_html($phpmailer) {
-			// Set the original plain text message
-			$phpmailer->AltBody = wp_specialchars_decode($phpmailer->Body, ENT_QUOTES);
-			// Clean < and > around text links in WP 3.1
-			$phpmailer->Body = $this->esc_textlinks($phpmailer->Body);
-			// Convert line breaks & make links clickable
-			$phpmailer->Body = nl2br(make_clickable($phpmailer->Body));
-			// Add template to message
-			$phpmailer->Body = $this->set_email_template($phpmailer->Body);
+		function send_html( $phpmailer ) {
+			/** Plain-text **************************************************/
+			// Decode body
+			$phpmailer->AltBody = wp_specialchars_decode( $phpmailer->Body, ENT_QUOTES );
+
+			// Add plain-text template to message
+			$phpmailer->AltBody = $this->set_email_template( $phpmailer->AltBody, 'plaintext_template' );
+
 			// Replace variables in email
-			$phpmailer->Body = $this->template_vars_replacement($phpmailer->Body);
+			$phpmailer->AltBody = apply_filters( 'wpbe_plaintext_body', $this->template_vars_replacement( $phpmailer->AltBody ) );
+
+			/** HTML ********************************************************/
+			// Clean < and > around text links in WP 3.1
+			$phpmailer->Body = $this->esc_textlinks( $phpmailer->Body );
+
+			// Convert line breaks & make links clickable
+			$phpmailer->Body = nl2br( make_clickable( $phpmailer->Body ) );
+
+			// Add template to message
+			$phpmailer->Body = $this->set_email_template( $phpmailer->Body );
+
+			// Replace variables in email
+			$phpmailer->Body = apply_filters( 'wpbe_html_body', $this->template_vars_replacement( $phpmailer->Body ) );
 		}
 
 		/**
