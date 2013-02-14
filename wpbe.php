@@ -101,15 +101,30 @@ if (!class_exists('WP_Better_Emails')) {
 		 * @since 0.2
 		 */
 		function set_options() {
+			// HTML default template
 			$template = '';
 			@require('templates/template-1.php');
+
+			// Plain-text default template
+			$plaintext = '%content%
+
+---
+
+Email sent %date% @ %time%
+For any requests, please contact %admin_email%';
+
+			// Setup options array
 			$this->options = array(
-				'from_email' => '',
-				'from_name' => '',
-				'template' => $template
+				'from_email'         => '',
+				'from_name'          => '',
+				'template'           => $template,
+				'plaintext_template' => $plaintext
 			);
-			if (get_option('wpbe_options') == null)
-				add_option('wpbe_options', $this->options);
+
+			// If option doesn't exist, save default option
+			if ( get_option( 'wpbe_options' ) == null ) {
+				add_option( 'wpbe_options', $this->options );
+			}
 		}
 
 		/**
