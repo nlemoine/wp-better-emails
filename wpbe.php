@@ -554,6 +554,19 @@ For any requests, please contact %admin_email%';
 			}
 		}
 
+		/**
+		 * Print plain-text textarea field to edit template.
+		 *
+		 * @since 0.2.x
+		 */
+		function plaintext_template_editor() {
+		?>
+
+				<textarea id="wpbe_plaintext_template" class="wpbe_template" name="wpbe_options[plaintext_template]" cols="120" rows="10"><?php echo $this->options['plaintext_template']; ?></textarea>
+
+		<?php
+		}
+
 	}
 
 }
