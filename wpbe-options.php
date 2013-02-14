@@ -3,7 +3,7 @@
 
 	<form method="post" action="options.php" id="wpbe_options_form">
 		<?php settings_fields('wpbe_full_options'); ?>
-		
+
 		<!-- Sender options -->
 		<p style="margin-bottom: 0;"><?php _e('Set your own sender name and email address. Default Wordpress values will be used if empty.', 'wp-better-emails'); ?></p>
 		<table class="form-table">
@@ -16,7 +16,7 @@
 				<td><input type="text" id="wpbe_from_email" class="regular-text" name="wpbe_options[from_email]" value="<?php echo esc_attr_e($this->options['from_email']); ?>" /></td>
 			</tr>
 		</table>
-		
+
 		<!-- Template -->
 		<h3 class="wpbe_title"><?php _e('HTML Template', 'wp-better-emails'); ?>
 		<?php if( version_compare($wp_version, '3.1', '>') ): ?>

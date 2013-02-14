@@ -41,7 +41,7 @@ if (!class_exists('WP_Better_Emails')) {
 
 		/**
 		 * Construct function (old way)
-		 * 
+		 *
 		 * @since 0.2
 		 */
 		function WP_Better_Emails() {
@@ -50,14 +50,14 @@ if (!class_exists('WP_Better_Emails')) {
 
 		/**
 		 * Construct function
-		 * 
+		 *
 		 * @since 0.2
 		 */
 		function __construct() {
 			global $wp_version;
-			
+
 			$this->get_options();
-			
+
 			// Front end filter
 			add_filter('wp_mail_from_name', array(&$this, 'set_from_name'));
 			add_filter('wp_mail_from', array($this, 'set_from_email'));
@@ -77,7 +77,7 @@ if (!class_exists('WP_Better_Emails')) {
 				add_action('admin_head', array(&$this, 'load_wp_tiny_mce'));
 			if( version_compare($wp_version, '3.2', '<') && version_compare($wp_version, '3.0.6', '>') )
 				add_action( 'admin_print_footer_scripts', 'wp_tiny_mce_preload_dialogs');
-			
+
 			// Filters
 			add_filter('plugin_action_links_' . plugin_basename(__FILE__), array(&$this, 'settings_link'));
 			add_filter('contextual_help', array(&$this, 'contextual_help'), 10, 3);
@@ -88,7 +88,7 @@ if (!class_exists('WP_Better_Emails')) {
 
 		/**
 		 * Get recorded options
-		 * 
+		 *
 		 * @since 0.2
 		 */
 		function get_options() {
@@ -97,7 +97,7 @@ if (!class_exists('WP_Better_Emails')) {
 
 		/**
 		 * Set the default options
-		 * 
+		 *
 		 * @since 0.2
 		 */
 		function set_options() {
@@ -166,10 +166,10 @@ if (!class_exists('WP_Better_Emails')) {
 
 		/**
 		 * Check if we're on the plugin page
-		 * 
+		 *
 		 * @since 0.2
 		 * @global type $page_hook
-		 * @return type 
+		 * @return type
 		 */
 		function is_wpbe_page() {
 			global $page_hook;
@@ -332,7 +332,7 @@ if (!class_exists('WP_Better_Emails')) {
 		 *
 		 * @since 0.1
 		 * @param string $from_email
-		 * @return string 
+		 * @return string
 		 */
 		function set_from_email($from_email) {
 			if (!empty($this->options['from_email']) && is_email($this->options['from_email']))
@@ -431,7 +431,7 @@ if (!class_exists('WP_Better_Emails')) {
 		 * Editing HTML emails requires some more plugins from TinyMCE:
 		 *  - fullpage to handle html, meta, body tags
 		 *  - codemirror for editing source
-		 * 
+		 *
 		 * @since 0.2
 		 * @param array $external_plugins
 		 * @return array
@@ -454,12 +454,12 @@ if (!class_exists('WP_Better_Emails')) {
 
 		/**
 		 * Button to the TinyMCE toolbar
-		 * 
+		 *
 		 * @since 0.2
 		 * @global string $page
 		 * @global type $page_hook
 		 * @param type $buttons
-		 * @return type 
+		 * @return type
 		 */
 		function tinymce_buttons($buttons) {
 			if ($this->is_wpbe_page())
@@ -469,9 +469,9 @@ if (!class_exists('WP_Better_Emails')) {
 
 		/**
 		 * Prevent TinyMCE from removing line breaks
-		 * 
+		 *
 		 * @param array $init
-		 * @return boolean 
+		 * @return boolean
 		 */
 		function tinymce_config($init) {
 			if (!$this->is_wpbe_page())
@@ -485,7 +485,7 @@ if (!class_exists('WP_Better_Emails')) {
 
 		/**
 		 * Load WP tinyMCE editor
-		 * 
+		 *
 		 * @since 0.2
 		 */
 		function load_wp_tiny_mce() {
@@ -500,7 +500,7 @@ if (!class_exists('WP_Better_Emails')) {
 
 		/**
 		 * Print WP TinyMCE editor to edit template
-		 * 
+		 *
 		 * @since 0.2
 		 * @global string $wp_version
 		 */
