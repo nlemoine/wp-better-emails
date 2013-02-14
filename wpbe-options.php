@@ -5,6 +5,7 @@
 		<?php settings_fields('wpbe_full_options'); ?>
 
 		<!-- Sender options -->
+		<h3 class="wpbe_title"><?php _e('Sender Options', 'wp-better-emails'); ?></h3>
 		<p style="margin-bottom: 0;"><?php _e('Set your own sender name and email address. Default Wordpress values will be used if empty.', 'wp-better-emails'); ?></p>
 		<table class="form-table">
 			<tr valign="top">
@@ -27,6 +28,9 @@
 		<div id="wpbe_template_container">
 			<?php $this->template_editor() ?>
 		</div>
+
+		<!-- Preview -->
+		<h3 class="wpbe_title"><?php _e('Preview', 'wp-better-emails'); ?></h3>
 		<div id="wpbe_preview_message"></div>
 		<table class="form-table">
 			<tr valign="top">
