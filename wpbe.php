@@ -331,18 +331,24 @@ For any requests, please contact %admin_email%';
 		}
 
 		/**
-		 * Add the HTML template to the message body.
-		 * Looks for %message% into the template and replace it with the message
+		 * Add the template to the message body.
+		 *
+		 * Looks for %message% into the template and replaces it with the message.
 		 *
 		 * @since 0.1
 		 * @param string $body The message to templatize
+		 * @param string $type The type of template to use. Defaults to 'template', which is HTML.
+		 *  Use 'plaintext_template' to use the plain-text template.
 		 * @return string $email The email surrounded by template
 		 */
-		function set_email_template($body) {
+		function set_email_template( $body, $type = 'template' ) {
 			$template = '';
-			if (isset($this->options['template']) && !empty($this->options['template']))
-				$template .= $this->options['template'];
-			return str_replace('%content%', $body, $template);
+
+			if ( isset( $this->options[$type] ) && ! empty( $this->options[$type] ) ) {
+				$template .= $this->options[$type];
+			}
+
+			return str_replace( '%content%', $body, $template );
 		}
 
 		/**
