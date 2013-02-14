@@ -301,17 +301,20 @@ For any requests, please contact %admin_email%';
 		 */
 		function template_vars_replacement($template) {
 			$to_replace = array(
-				'blog_url'			=> get_option('siteurl'),
-				'home_url'			=> get_option('home'),
-				'blog_name'			=> get_option('blogname'),
-				'blog_description'	=> get_option('blogdescription'),
-				'admin_email'		=> get_option('admin_email'),
-				'date'				=> date_i18n(get_option('date_format')),
-				'time'				=> date_i18n(get_option('time_format'))
+				'blog_url'         => get_option('siteurl'),
+				'home_url'         => get_option('home'),
+				'blog_name'        => get_option('blogname'),
+				'blog_description' => get_option('blogdescription'),
+				'admin_email'      => get_option('admin_email'),
+				'date'             => date_i18n(get_option('date_format')),
+				'time'             => date_i18n(get_option('time_format'))
 			);
 			$to_replace = apply_filters('wpbe_tags', $to_replace);
-			foreach ($to_replace as $tag => $var)
-				$template = str_replace('%' . $tag . '%', $var, $template);
+
+			foreach ( $to_replace as $tag => $var ) {
+				$template = str_replace( '%' . $tag . '%', $var, $template );
+			}
+
 			return $template;
 		}
 
