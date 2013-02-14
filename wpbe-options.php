@@ -6,7 +6,7 @@
 
 		<!-- Sender options -->
 		<h3 class="wpbe_title"><?php _e('Sender Options', 'wp-better-emails'); ?></h3>
-		<p style="margin-bottom: 0;"><?php _e('Set your own sender name and email address. Default Wordpress values will be used if empty.', 'wp-better-emails'); ?></p>
+		<p style="margin-bottom: 0;"><?php _e('Set your own sender name and email address. Default WordPress values will be used if empty.', 'wp-better-emails'); ?></p>
 		<table class="form-table">
 			<tr valign="top">
 				<th scope="row"><label for="wpbe_from_name"><?php _e('Name', 'wp-better-emails'); ?></label></th>
