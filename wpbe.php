@@ -238,27 +238,47 @@ For any requests, please contact %admin_email%';
 		 * @param array $input The options returned by the options page
 		 * @return array $input Sanitized values
 		 */
-		function validate_options($input) {
+		function validate_options( $input ) {
 
-			$from_email = strtolower($input['from_email']);
+			$from_email = strtolower( $input['from_email'] );
 
 			// Checking emails
-			if (!empty($from_email) && !is_email($from_email)) {
-				add_settings_error('wpbe_options', 'settings_updated', __('Please enter a valid sender email address.', 'wp-better-emails'), 'error');
+			if ( ! empty( $from_email ) && ! is_email( $from_email ) ) {
+				add_settings_error( 'wpbe_options', 'settings_updated', __( 'Please enter a valid sender email address.', 'wp-better-emails' ), 'error' );
 				$input['from_email'] = '';
 			} else {
-				$input['from_email'] = sanitize_email($from_email);
+				$input['from_email'] = sanitize_email( $from_email );
 			}
 
 			// Check name
-			$input['from_name'] = esc_html($input['from_name']);
+			$input['from_name'] = esc_html( $input['from_name'] );
 
-			if (empty($input['template']))
-				add_settings_error('wpbe_options', 'settings_updated', __('Template is empty', 'wp-better-emails'));
+			/** Check HTML template *****************************************/
+
+			// Template is empty
+			if ( empty( $input['template'] ) ) {
+				add_settings_error( 'wpbe_options', 'settings_updated', __( 'Template is empty', 'wp-better-emails' ) );
+			
 			// Check if %content% tag is the template body
-			elseif (strpos($input['template'], '%content%') === false)
-				add_settings_error('wpbe_options', 'settings_updated', __('No content tag found. The %content% tag is required in your template', 'wp-better-emails'));
+			} elseif ( strpos( $input['template'], '%content%' ) === false ) {
+				add_settings_error( 'wpbe_options', 'settings_updated', __( 'No content tag found. The %content% tag is required in your template', 'wp-better-emails' ) );
+			}
+
 			$input['template'] = $input['template'];
+
+			/** Check plain-text template ***********************************/
+
+			// Template is empty
+			if ( empty( $input['plaintext_template'] ) ) {
+				add_settings_error( 'wpbe_options', 'settings_updated', __( 'Plain-text template is empty', 'wp-better-emails' ) );
+			
+			// Check if %content% tag is the template body
+			} elseif ( strpos( $input['plaintext_template'], '%content%' ) === false ) {
+				add_settings_error( 'wpbe_options', 'settings_updated', __( 'No content tag found. The %content% tag is required in your plain-text template', 'wp-better-emails' ) );
+			}
+
+			$input['plaintext_template'] = $input['plaintext_template'];
+
 
 			return $input;
 		}
