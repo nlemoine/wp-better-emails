@@ -25,7 +25,7 @@ jQuery(document).ready(function($){
 	});
 	
 	// Trigger help
-	$('#wpbe_help').bind('click', function(e){
+	$('.wpbe_help').bind('click', function(e){
 		e.preventDefault();
 		$('a#contextual-help-link').trigger('click');
 	});
