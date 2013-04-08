@@ -3,9 +3,10 @@
 
 	<form method="post" action="options.php" id="wpbe_options_form">
 		<?php settings_fields('wpbe_full_options'); ?>
-		
+
 		<!-- Sender options -->
-		<p style="margin-bottom: 0;"><?php _e('Set your own sender name and email address. Default Wordpress values will be used if empty.', 'wp-better-emails'); ?></p>
+		<h3 class="wpbe_title"><?php _e('Sender Options', 'wp-better-emails'); ?></h3>
+		<p style="margin-bottom: 0;"><?php _e('Set your own sender name and email address. Default WordPress values will be used if empty.', 'wp-better-emails'); ?></p>
 		<table class="form-table">
 			<tr valign="top">
 				<th scope="row"><label for="wpbe_from_name"><?php _e('Name', 'wp-better-emails'); ?></label></th>
@@ -16,17 +17,27 @@
 				<td><input type="text" id="wpbe_from_email" class="regular-text" name="wpbe_options[from_email]" value="<?php echo esc_attr_e($this->options['from_email']); ?>" /></td>
 			</tr>
 		</table>
-		
+
 		<!-- Template -->
 		<h3 class="wpbe_title"><?php _e('HTML Template', 'wp-better-emails'); ?>
 		<?php if( version_compare($wp_version, '3.1', '>') ): ?>
 			<a class="thickbox button" title="<?php esc_attr_e('Live template preview', 'wp-better-emails'); ?>" id="wpbe_preview_template" href="<?php echo plugins_url('preview.html?keepThis=true&TB_iframe=true&height=400&width=700', __FILE__); ?>"><?php _e('Live preview', 'wp-better-emails'); ?></a>
 		<?php endif; ?>
 		</h3>
-		<p><?php _e('Edit the HTML email template if you want to customize it. You might have a look at the <a href="#" id="wpbe_help">help tab</a> for further information.', 'wp-better-emails'); ?></p>
+		<p><?php _e('Edit the HTML email template if you want to customize it. You might have a look at the <a href="#" class="wpbe_help">help tab</a> for further information.', 'wp-better-emails'); ?></p>
 		<div id="wpbe_template_container">
 			<?php $this->template_editor() ?>
 		</div>
+
+		<!-- Plain-text template -->
+		<h3 class="wpbe_title"><?php _e('Plain-text Template', 'wp-better-emails'); ?></h3>
+		<p><?php _e('Edit the plain-text template if you want to customize it. You might have a look at the <a href="#" class="wpbe_help">help tab</a> for further information.', 'wp-better-emails'); ?></p>
+		<div id="wpbe_plaintext_template_container">
+			<?php $this->plaintext_template_editor(); ?>
+		</div>
+
+		<!-- Preview -->
+		<h3 class="wpbe_title"><?php _e('Preview', 'wp-better-emails'); ?></h3>
 		<div id="wpbe_preview_message"></div>
 		<table class="form-table">
 			<tr valign="top">
