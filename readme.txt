@@ -2,8 +2,8 @@
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=7Q49VJQNRCQ8E&lc=FR&item_name=ArtyShow&item_number=wp%2dbetter%2demails&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 Tags: email, emails, html emails, templates, notification, wp_mail, wpmu, multisite
 Requires at least: 2.8
-Tested up to: 3.4.2
-Stable tag: 0.2.4.1
+Tested up to: 3.5.1
+Stable tag: 0.2.5
 
 Adds a customizable good looking HTML template to all WP default plain/text emails and lets you set
  a custom sender name and email address.
@@ -40,10 +40,11 @@ WP Better Emails is currently available in :
 * French
 * German - [Robert Tremmel](http://roberttremmel.de/ "Robert Tremmel")
 * Hebrew - [Avi Ben-Avraham](mailto:avi@nrich.co.il "Avi Ben-Avraham")
-* Turkish - [Ünsal Korkmaz](http://www.unsalkorkmaz.com/ "Ünsal Korkmaz")
+* Turkish - [?nsal Korkmaz](http://www.unsalkorkmaz.com/ "?nsal Korkmaz")
 * Italian - [Fabio Lelli](http://www.synaestesia.com/ "Fabio Lelli")
 * Arabic - [Yaser Maadan](http://www.englize.com/ "Yaser Maadan")
 * Simplified Chinese - [Will Yuan](http://yslove.net/ "Will Yuan")
+* Brazilian portuguese - [Johnny Bauer](mailto:thankamikase@yahoo.com.br "Johnny Bauer")
 
 I'm looking for translators to extend to other languages. If you have translated the plugin in your language or want to,
 please let me know : plugins [ at ] artyshow-studio.fr
@@ -119,6 +120,12 @@ You can place this function in your functions.php theme file or in a plugin.
 5. Help tab with information about available tags.
 
 == Changelog ==
+
+= 0.2.5 =
+
+* Added plain text template support
+* Fixed phpmailer_init action
+* Brazilian portuguese translation added
 
 = 0.2.4.1 =
 

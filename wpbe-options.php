@@ -24,7 +24,7 @@
 			<a class="thickbox button" title="<?php esc_attr_e('Live template preview', 'wp-better-emails'); ?>" id="wpbe_preview_template" href="<?php echo plugins_url('preview.html?keepThis=true&TB_iframe=true&height=400&width=700', __FILE__); ?>"><?php _e('Live preview', 'wp-better-emails'); ?></a>
 		<?php endif; ?>
 		</h3>
-		<p><?php _e('Edit the HTML email template if you want to customize it. You might have a look at the <a href="#" class="wpbe_help">help tab</a> for further information.', 'wp-better-emails'); ?></p>
+		<p><?php _e('Edit the HTML template if you want to customize it. You might have a look at the <a href="#" class="wpbe_help">help tab</a> for further information.', 'wp-better-emails'); ?></p>
 		<div id="wpbe_template_container">
 			<?php $this->template_editor() ?>
 		</div>

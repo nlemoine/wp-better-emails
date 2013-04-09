@@ -3,7 +3,7 @@
   Plugin Name: WP Better Emails
   Plugin URI: http://wordpress.org/extend/plugins/wp-better-emails/
   Description: Beautify the default text/plain WP mails into fully customizable HTML emails.
-  Version: 0.2.4.1
+  Version: 0.2.5
   Author: ArtyShow
   Author URI: http://wordpress.org/extend/plugins/wp-better-emails/
   License: GPLv2
@@ -39,6 +39,7 @@ if ( ! class_exists( 'WP_Better_Emails' ) ) {
 
 		var $options = array();
 		var $page = '';
+		var $send_as_html;
 
 		/**
 		 * Construct function (old way)
@@ -63,6 +64,7 @@ if ( ! class_exists( 'WP_Better_Emails' ) ) {
 			add_filter( 'wp_mail_from_name',    array( $this, 'set_from_name' ) );
 			add_filter( 'wp_mail_from',         array( $this, 'set_from_email' ) );
 			add_filter( 'wp_mail_content_type', array( $this, 'set_content_type'), 100 );
+			add_action('phpmailer_init', array(&$this, 'send_html'));
 
 			if ( ! is_admin() )
 				return;
@@ -104,6 +106,7 @@ if ( ! class_exists( 'WP_Better_Emails' ) ) {
 		 * @since 0.2
 		 */
 		function set_options() {
+
 			// HTML default template
 			$template = '';
 			@require( 'templates/template-1.php' );
@@ -125,7 +128,7 @@ For any requests, please contact %admin_email%';
 			);
 
 			// If option doesn't exist, save default option
-			if ( get_option( 'wpbe_options' ) == null ) {
+			if ( get_option( 'wpbe_options' ) === null ) {
 				add_option( 'wpbe_options', $this->options );
 			}
 		}
@@ -163,7 +166,6 @@ For any requests, please contact %admin_email%';
 		 */
 		function install() {
 			global $wp_version;
-
 			// Prevent activation if requirements are not met
 			// WP 2.8 required
 			if ( version_compare( $wp_version, '2.8', '<=' ) ) {
@@ -433,9 +435,10 @@ For any requests, please contact %admin_email%';
 		function set_content_type( $content_type ) {
 			// Only convert if the message is text/plain and the template is ok
 			if ( $content_type == 'text/plain' && $this->check_template() === true ) {
-				add_action( 'phpmailer_init', array( $this, 'send_html' ) );
-
-				return $content_type = 'text/html';
+				$this->send_as_html = true;
+ 				return $content_type = 'text/html';
+			} else {
+				$this->send_as_html = false;
 			}
 			return $content_type;
 		}
@@ -456,19 +459,21 @@ For any requests, please contact %admin_email%';
 
 			// Replace variables in email
 			$phpmailer->AltBody = apply_filters( 'wpbe_plaintext_body', $this->template_vars_replacement( $phpmailer->AltBody ) );
+			
+			if ( $this->send_as_html ) {
+				/** HTML ********************************************************/
+				// Clean < and > around text links in WP 3.1
+				$phpmailer->Body = $this->esc_textlinks( $phpmailer->Body );
 
-			/** HTML ********************************************************/
-			// Clean < and > around text links in WP 3.1
-			$phpmailer->Body = $this->esc_textlinks( $phpmailer->Body );
+				// Convert line breaks & make links clickable
+				$phpmailer->Body = nl2br( make_clickable( $phpmailer->Body ) );
 
-			// Convert line breaks & make links clickable
-			$phpmailer->Body = nl2br( make_clickable( $phpmailer->Body ) );
+				// Add template to message
+				$phpmailer->Body = $this->set_email_template( $phpmailer->Body );
 
-			// Add template to message
-			$phpmailer->Body = $this->set_email_template( $phpmailer->Body );
-
-			// Replace variables in email
-			$phpmailer->Body = apply_filters( 'wpbe_html_body', $this->template_vars_replacement( $phpmailer->Body ) );
+				// Replace variables in email
+				$phpmailer->Body = apply_filters( 'wpbe_html_body', $this->template_vars_replacement( $phpmailer->Body ) );
+			}
 		}
 
 		/**
