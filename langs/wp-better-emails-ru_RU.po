@@ -1,0 +1,290 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Better Emails v0.2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2013-07-18 08:25:47+0000\n"
+"Last-Translator: vsevolod <redcode.sys@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%100/10==1 ? 2 : n%10==1 ? 0 : (n+9)%10>3 ? 2 : 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: Russian\n"
+"X-Poedit-Country: RUSSIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: templates/template-1.php:38
+#@ wp-better-emails
+msgid "Date"
+msgstr "Дата"
+
+#: templates/template-1.php:38
+#@ wp-better-emails
+msgid "Email sent"
+msgstr "Email отправлен"
+
+#: templates/template-1.php:39
+#@ wp-better-emails
+msgid "Contact"
+msgstr "Контакт"
+
+#: templates/template-1.php:39
+#@ wp-better-emails
+msgid "For any requests, please contact"
+msgstr "Обращайтесь по любым вопросам"
+
+#: wpbe-options.php:2
+#: wpbe.php:186
+#@ wp-better-emails
+msgid "Email settings"
+msgstr "Настройки Email"
+
+#: wpbe-options.php:8
+#@ wp-better-emails
+msgid "Sender Options"
+msgstr "Настройки отправителя"
+
+#: wpbe-options.php:9
+#@ wp-better-emails
+msgid "Set your own sender name and email address. Default WordPress values will be used if empty."
+msgstr "Ваши имя отправителя и email адрес. Будут использованы настройки по умолчанию если значения пусты."
+
+#: wpbe-options.php:12
+#@ wp-better-emails
+msgid "Name"
+msgstr "Имя"
+
+#: wpbe-options.php:16
+#@ wp-better-emails
+msgid "Email address"
+msgstr "Email адрес"
+
+#: wpbe-options.php:22
+#@ wp-better-emails
+msgid "HTML Template"
+msgstr "HTML Шаблон"
+
+#: wpbe-options.php:24
+#@ wp-better-emails
+msgid "Live template preview"
+msgstr "Предосмотр шаблона"
+
+#: wpbe-options.php:24
+#@ wp-better-emails
+msgid "Live preview"
+msgstr "Предосмотр"
+
+#: wpbe-options.php:27
+#@ wp-better-emails
+msgid "Edit the HTML template if you want to customize it. You might have a look at the <a href=\"#\" class=\"wpbe_help\">help tab</a> for further information."
+msgstr "Редактируйте HTML шаблон. Вы можете посмотреть во <a href=\"#\" class=\"wpbe_help\">вкладке помощи</a> для более подробной информации."
+
+#: wpbe-options.php:33
+#@ wp-better-emails
+msgid "Plain-text Template"
+msgstr "Текстовой Шаблон"
+
+#: wpbe-options.php:34
+#@ wp-better-emails
+msgid "Edit the plain-text template if you want to customize it. You might have a look at the <a href=\"#\" class=\"wpbe_help\">help tab</a> for further information."
+msgstr "Редактируйте текстовой шаблон. Вы можете посмотреть во <a href=\"#\" class=\"wpbe_help\">вкладке помощи</a> для более подробной информации."
+
+#: wpbe-options.php:40
+#@ wp-better-emails
+msgid "Preview"
+msgstr "Предосмотр"
+
+#: wpbe-options.php:45
+#@ wp-better-emails
+msgid "Send an email preview to"
+msgstr "Кому отправить предосмотр"
+
+#: wpbe-options.php:49
+#@ wp-better-emails
+msgid "Send"
+msgstr "Отправить"
+
+#: wpbe-options.php:51
+#@ wp-better-emails
+msgid "You must save your template before sending an email preview."
+msgstr "Вы должны сохранить ваш шаблон перед отправкой email предосмотра."
+
+#: wpbe-options.php:56
+#@ wp-better-emails
+msgid "Save Changes"
+msgstr "Сохранить изменения"
+
+#: wpbe-options.php:61
+#@ wp-better-emails
+msgid "Support & bug report"
+msgstr "Поддержка и отчеты об ошибках"
+
+#: wpbe-options.php:62
+#@ wp-better-emails
+msgid "If you have any idea to improve this plugin or any bug to report, please email me at : <a href=\"mailto:plugins@artyshow-studio.fr?subject=[wp-better-emails]\">plugins@artyshow-studio.fr</a>"
+msgstr "Если у вас есть идея, как улучшить этот плагин или сообщить об ошибке, пишите мне на <a href=\"mailto:plugins@artyshow-studio.fr?subject=[wp-better-emails]\">plugins@artyshow-studio.fr</a>"
+
+#: wpbe-options.php:64
+#, php-format
+#@ wp-better-emails
+msgid "You like this plugin ? You use it in a business context ? Please, consider a <a href=\"%s\" target=\"_blank\" rel=\"external\">donation</a>."
+msgstr "Вам нравиться этот плагин? Вы используете его в коммерческих целях? Пожалуйста, <a href=\"%s\" target=\"_blank\" rel=\"external\">поддержите пожертвованиями</a>."
+
+#: wpbe.php:156
+#@ wp-better-emails
+msgid "Settings"
+msgstr "Опции"
+
+#: wpbe.php:174
+#@ wp-better-emails
+msgid "WP Better Emails requires WordPress 2.8 or newer."
+msgstr "WP Better Emails требует WordPress версии 2.8 или новее."
+
+#: wpbe.php:174
+#@ wp-better-emails
+msgid "Upgrade your Wordpress installation."
+msgstr "Обновите ваш Wordpress"
+
+#: wpbe.php:186
+#@ wp-better-emails
+msgid "WP Better Emails"
+msgstr "WP Better Emails"
+
+#: wpbe.php:263
+#@ wp-better-emails
+msgid "Please enter a valid sender email address."
+msgstr "Пожалуйста введите существующий адрес отправителя"
+
+#: wpbe.php:276
+#@ wp-better-emails
+msgid "Template is empty"
+msgstr "Шаблон пуст"
+
+#: wpbe.php:280
+#, php-format
+#@ wp-better-emails
+msgid "No content tag found. The %content% tag is required in your template"
+msgstr "Не найдено тега содержания. %content% тег необходим в вашем шаблоне."
+
+#: wpbe.php:289
+#@ wp-better-emails
+msgid "Plain-text template is empty"
+msgstr "Текстовой шаблон пуст."
+
+#: wpbe.php:293
+#, php-format
+#@ wp-better-emails
+msgid "No content tag found. The %content% tag is required in your plain-text template"
+msgstr "Не найдено тега содержания. %content% тег необходим в вашем текстовом шаблоне."
+
+#: wpbe.php:317
+#@ wp-better-emails
+msgid "Please enter an email"
+msgstr "Введите email"
+
+#: wpbe.php:320
+#@ wp-better-emails
+msgid "Please enter a valid email"
+msgstr "Введите существующий email"
+
+#: wpbe.php:323
+#@ wp-better-emails
+msgid "Hey !"
+msgstr "Привет !"
+
+#: wpbe.php:325
+#@ wp-better-emails
+msgid "This is a sample email to test your HTML template."
+msgstr "Это пройстой email для проверки вашего HTML шаблона."
+
+#: wpbe.php:327
+#@ wp-better-emails
+msgid "If you're not skilled in HTML/CSS email coding, I strongly recommend to leave the default template as it is. It has been tested on various and popular email clients like Gmail, Yahoo Mail, Hotmail/Live, Thunderbird, Apple Mail, Outlook, and many more."
+msgstr "Если вы не знаете HTML или CSS, то я вам настоятельно рекомендую оставить стандартные шаблоны как есть. Они были проверены в разных email клиентах как Gmail, Yahoo Mail, Hotmail/Live, Thunderbird, Apple Mail, Outlook, и многих других."
+
+#: wpbe.php:329
+#@ wp-better-emails
+msgid "If you have any problems or any suggestions to improve this plugin, please let me know."
+msgstr "Если у вас есть проблемы и предложения для улучшения этого плагина, дайте мне знать."
+
+#: wpbe.php:333
+#@ wp-better-emails
+msgid "Email template preview"
+msgstr "Предосмотр email шаблона"
+
+#: wpbe.php:334
+#, php-format
+#@ wp-better-emails
+msgid "An email preview has been successfully sent to %s"
+msgstr "Предосмотр письма был успешно отправлен %s"
+
+#: wpbe.php:336
+#@ wp-better-emails
+msgid "An error occured while sending email. Please check your server configuration."
+msgstr "Случилась ошибка при отправке письма. Проверьте конфигурацию вашего сервера."
+
+#: wpbe.php:503
+#@ wp-better-emails
+msgid "Some dynamic tags can be included in your email template :"
+msgstr "Некоторые динамичные теги могут быть включены в ваш шаблон:"
+
+#: wpbe.php:505
+#, php-format
+#@ wp-better-emails
+msgid "<strong>%content%</strong> : will be replaced with the message content."
+msgstr "<strong>%content%</strong> : будет заменено содержанием письма."
+
+#: wpbe.php:506
+#@ wp-better-emails
+msgid "NOTE: The content tag is <strong>required</strong>, WP Better Emails will be automatically desactivated if no content tag is found."
+msgstr "NB! Тег содержания - <strong>required</strong>, WP Better Emails будет автоматически отключен если не будет найдено тега содержания."
+
+#: wpbe.php:507
+#, php-format
+#@ wp-better-emails
+msgid "<strong>%blog_url%</strong> : will be replaced with your blog URL."
+msgstr "<strong>%blog_url%</strong> : будет заменено ссылкой на ваш блог"
+
+#: wpbe.php:508
+#, php-format
+#@ wp-better-emails
+msgid "<strong>%home_url%</strong> : will be replaced with your home URL."
+msgstr "<strong>%home_url%</strong> : будет заменено ссылкой на вашу домашнюю страницу."
+
+#: wpbe.php:509
+#, php-format
+#@ wp-better-emails
+msgid "<strong>%blog_name%</strong> : will be replaced with your blog name."
+msgstr "<strong>%blog_name%</strong> : будет заменено названием вашего блога."
+
+#: wpbe.php:510
+#, php-format
+#@ wp-better-emails
+msgid "<strong>%blog_description%</strong> : will be replaced with your blog description."
+msgstr "<strong>%blog_description%</strong> : будет заменено описанием вашего блога."
+
+#: wpbe.php:511
+#, php-format
+#@ wp-better-emails
+msgid "<strong>%admin_email%</strong> : will be replaced with admin email."
+msgstr "<strong>%admin_email%</strong> : будет заменено email администратора."
+
+#: wpbe.php:512
+#, php-format
+#@ wp-better-emails
+msgid "<strong>%date%</strong> : will be replaced with current date, as formatted in <a href=\"options-general.php\">general options</a>."
+msgstr "<strong>%date%</strong> : будет заменено текущей датой, как отформатировано в  <a href=\"options-general.php\">главных настройках</a>."
+
+#: wpbe.php:513
+#, php-format
+#@ wp-better-emails
+msgid "<strong>%time%</strong> : will be replaced with current time, as formatted in <a href=\"options-general.php\">general options</a>."
+msgstr "<strong>%time%</strong> : будет заменено текущим временем, как отформатировано в <a href=\"options-general.php\">главных настройках</a>."
+

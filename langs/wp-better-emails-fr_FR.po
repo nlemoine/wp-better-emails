@@ -4,15 +4,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Better Emails\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/wp-better-emails\n"
-"POT-Creation-Date: 2013-04-08 14:50+0100\n"
-"PO-Revision-Date: 2013-04-08 14:51+0100\n"
+"POT-Creation-Date: 2013-08-25 16:40+0100\n"
+"PO-Revision-Date: 2013-08-25 16:53+0100\n"
 "Last-Translator: \n"
 "Language-Team: Nicolas Lemoine <plugins@artyshow-studio.fr>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.5.7\n"
 
 #: ../wpbe-options.php:2 ../wpbe.php:186
 msgid "Email settings"
@@ -97,14 +97,13 @@ msgid "Support & bug report"
 msgstr "Support & report de bugs"
 
 #: ../wpbe-options.php:62
+#, php-format
 msgid ""
 "If you have any idea to improve this plugin or any bug to report, please "
-"email me at : <a href=\"mailto:plugins@artyshow-studio.fr?subject=[wp-better-"
-"emails]\">plugins@artyshow-studio.fr</a>"
+"email me at : <a href=\"%1$s\">%2$s</a>"
 msgstr ""
 "Si vous avez des idées d'amélioration ou des bugs à mentionner, envoyez-moi "
-"un email à <a href=\"mailto:plugins@artyshow-studio.fr?subject=[wp-better-"
-"emails]\">plugins@artyshow-studio.fr</a>"
+"un email à <a href=\"%1$s\">%2$s</a>"
 
 #: ../wpbe-options.php:64
 #, php-format
@@ -114,6 +113,18 @@ msgid ""
 msgstr ""
 "Vous aimez ce plugin ? Vous l'utilisez dans un contexte professionnel ? "
 "Considérez un <a href=\"%s\" target=\"_blank\" rel=\"external\">don</a>."
+
+#: ../wpbe-options.php:65
+#, php-format
+msgid ""
+"You can still provide some support by <a href=\"%1$s\" target=\"_blank"
+"\">voting for it</a> and/or says that <a href=\"%2$s\" target=\"_blank\">it "
+"works</a> for your WordPress installation on the official WordPress plugins "
+"repository."
+msgstr ""
+"Vous pouvez toujours apporter votre soutien en <a href=\"%1$s\" target="
+"\"_blank\">votant</a> et/ou en disant <a href=\"%2$s\" target=\"_blank"
+"\">qu'il fonctionne</a> sur le répertoire officiel des plugins WordPress."
 
 #: ../wpbe.php:156
 msgid "Settings"
