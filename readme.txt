@@ -3,7 +3,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=7Q49V
 Tags: email, emails, html emails, templates, notification, wp_mail, wpmu, multisite
 Requires at least: 2.8
 Tested up to: 3.6
-Stable tag: 0.2.6.1
+Stable tag: 0.2.6.3
 
 Adds a customizable good looking HTML template to all WP default plain/text emails and lets you set
  a custom sender name and email address.
@@ -40,13 +40,15 @@ WP Better Emails is currently available in :
 * French
 * German - [Robert Tremmel](http://roberttremmel.de/ "Robert Tremmel")
 * Hebrew - [Avi Ben-Avraham](mailto:avi@nrich.co.il "Avi Ben-Avraham")
-* Turkish - [Ünsal Korkmaz](http://www.unsalkorkmaz.com/ "Ünsal Korkmaz")
+* Turkish - [Ãœnsal Korkmaz](http://www.unsalkorkmaz.com/ "Ãœnsal Korkmaz")
 * Italian - [Fabio Lelli](http://www.synaestesia.com/ "Fabio Lelli")
 * Arabic - [Yaser Maadan](http://www.englize.com/ "Yaser Maadan")
 * Simplified Chinese - [Will Yuan](http://yslove.net/ "Will Yuan")
 * Brazilian portuguese - [Johnny Bauer](mailto:thankamikase@yahoo.com.br "Johnny Bauer")
 * Russian - Vsevolod Bauer
 * Farsi
+* Indonesian
+* Spanish - Kaled Kelevra
 
 I'm looking for translators to extend to other languages. If you have translated the plugin in your language or want to,
 please let me know : wpbetteremails [ at ] iamnico.la
@@ -122,6 +124,15 @@ You can place this function in your functions.php theme file or in a plugin.
 5. Help tab with information about available tags.
 
 == Changelog ==
+
+= 0.2.6.3 =
+
+* New translation : Spanish
+
+= 0.2.6.2 =
+
+* New translation : Indonesian
+* Fixed translation : Arabic, Farsi
 
 = 0.2.6.1 =
 

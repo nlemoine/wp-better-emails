@@ -1,0 +1,289 @@
+# Copyright (C) 2010 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Better Emails\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/wp-better-emails\n"
+"POT-Creation-Date: 2013-07-14 07:03+0100\n"
+"PO-Revision-Date: 2013-07-16 14:03+0100\n"
+"Last-Translator: Kaled Kelevra <kaled.kelevra@howly-mowly.com>\n"
+"Language-Team: Kaled Kelevra <kaled.kelevra@howly-mowly.com>\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+
+#: ../wpbe-options.php:2 ../wpbe.php:186
+msgid "Email settings"
+msgstr "Configuración del e-mail"
+
+#: ../wpbe-options.php:8
+msgid "Sender Options"
+msgstr "Opciones del remitente"
+
+#: ../wpbe-options.php:9
+msgid ""
+"Set your own sender name and email address. Default WordPress values will be "
+"used if empty."
+msgstr ""
+"Establece el nombre y la dirección de email del remitente. Si se deja vacío "
+"se utilizarán los valores por defecto de Wordpress."
+
+#: ../wpbe-options.php:12
+msgid "Name"
+msgstr "Nombre"
+
+#: ../wpbe-options.php:16
+msgid "Email address"
+msgstr "Dirección de email"
+
+#: ../wpbe-options.php:22
+msgid "HTML Template"
+msgstr "Plantilla HTML"
+
+#: ../wpbe-options.php:24
+msgid "Live template preview"
+msgstr "Vista previa de la plantilla"
+
+#: ../wpbe-options.php:24
+msgid "Live preview"
+msgstr "Vista previa"
+
+#: ../wpbe-options.php:27
+msgid ""
+"Edit the HTML template if you want to customize it. You might have a look at "
+"the <a href=\"#\" class=\"wpbe_help\">help tab</a> for further information."
+msgstr ""
+"Edita la plantilla de email HTML si quieres personalizarla. Consulta la "
+"pestaña <a href=\"#\" id=\"wpbe_help\">ayuda</a> para más información."
+
+#: ../wpbe-options.php:33
+msgid "Plain-text Template"
+msgstr "Plantilla de texto plano"
+
+#: ../wpbe-options.php:34
+msgid ""
+"Edit the plain-text template if you want to customize it. You might have a "
+"look at the <a href=\"#\" class=\"wpbe_help\">help tab</a> for further "
+"information."
+msgstr ""
+"Edita la plantilla de texto plano si quieres personalizarla. Consulta la "
+"pestaña <a href=\"#\" id=\"wpbe_help\">ayuda</a> para más información."
+
+#: ../wpbe-options.php:40
+msgid "Preview"
+msgstr "Vista previa"
+
+#: ../wpbe-options.php:45
+msgid "Send an email preview to"
+msgstr "Envía una vista previa del email a"
+
+#: ../wpbe-options.php:49
+msgid "Send"
+msgstr "Enviar"
+
+#: ../wpbe-options.php:51
+msgid "You must save your template before sending an email preview."
+msgstr "Debes guardar la plantilla antes de enviar una vista previa del email."
+
+#: ../wpbe-options.php:56
+msgid "Save Changes"
+msgstr "Guardar cambios"
+
+#: ../wpbe-options.php:61
+msgid "Support & bug report"
+msgstr "Soporte y reporte de errores"
+
+#: ../wpbe-options.php:62
+msgid ""
+"If you have any idea to improve this plugin or any bug to report, please "
+"email me at : <a href=\"mailto:plugins@artyshow-studio.fr?subject=[wp-better-"
+"emails]\">plugins@artyshow-studio.fr</a>"
+msgstr ""
+"Si tienes alguna idea para mejorar este plugin o algún error que reportar, "
+"por favor contáctame en: <a href=\"mailto:plugins@artyshow-studio.fr?subject="
+"[wp-better-emails]\">plugins@artyshow-studio.fr</a>"
+
+#: ../wpbe-options.php:64
+#, php-format
+msgid ""
+"You like this plugin ? You use it in a business context ? Please, consider a "
+"<a href=\"%s\" target=\"_blank\" rel=\"external\">donation</a>."
+msgstr ""
+"¿Te gusta este plugin? ¿Lo utilizas en un ámbito laboral? Por favor, "
+"considera la posibilidad de hacer una <a href=\"%s\" target=\"_blank\" rel="
+"\"external\">donación</a>."
+
+#: ../wpbe.php:156
+msgid "Settings"
+msgstr "Opciones"
+
+#: ../wpbe.php:174
+msgid "WP Better Emails requires WordPress 2.8 or newer."
+msgstr "Para usar WP Better Emails es necesario Wordpress 2.8 o superior"
+
+#: ../wpbe.php:174
+msgid "Upgrade your Wordpress installation."
+msgstr "Actualiza tu instalación de Wordpress."
+
+#: ../wpbe.php:186
+msgid "WP Better Emails"
+msgstr "WP Better Emails"
+
+#: ../wpbe.php:263
+msgid "Please enter a valid sender email address."
+msgstr "Por favor, introduce una dirección de email de remitente válida."
+
+#: ../wpbe.php:276
+msgid "Template is empty"
+msgstr "La plantilla está vacía"
+
+#: ../wpbe.php:280
+msgid "No content tag found. The %content% tag is required in your template"
+msgstr ""
+"No se encontró ninguna etiqueta content. La etiqueta %content% es "
+"obligatoria para tu plantilla\""
+
+#: ../wpbe.php:289
+msgid "Plain-text template is empty"
+msgstr "La plantilla de texto plano está vacía"
+
+#: ../wpbe.php:293
+msgid ""
+"No content tag found. The %content% tag is required in your plain-text "
+"template"
+msgstr ""
+"No se encontró ninguna etiqueta content. La etiqueta %content% es "
+"obligatoria para tu plantilla\""
+
+#: ../wpbe.php:317
+msgid "Please enter an email"
+msgstr "Por favor, introduce una dirección de email"
+
+#: ../wpbe.php:320
+msgid "Please enter a valid email"
+msgstr "Por favor, introduce una dirección de email válida"
+
+#: ../wpbe.php:323
+msgid "Hey !"
+msgstr "Hey!"
+
+#: ../wpbe.php:325
+msgid "This is a sample email to test your HTML template."
+msgstr "Este es un email de ejemplo para probar tu plantilla HTML."
+
+#: ../wpbe.php:327
+msgid ""
+"If you're not skilled in HTML/CSS email coding, I strongly recommend to "
+"leave the default template as it is. It has been tested on various and "
+"popular email clients like Gmail, Yahoo Mail, Hotmail/Live, Thunderbird, "
+"Apple Mail, Outlook, and many more."
+msgstr ""
+"Si no tienes habilidad utilizando código HTML/CSS, te recomiendo dejar la "
+"plantilla por defecto tal y como viene.  Ha sido probado en varios y "
+"populares clientes de correo como Gmail, Yahoo Mail, Hotmail/Live, "
+"Thunderbird, Apple Mail, Outlook, y muchos más."
+
+#: ../wpbe.php:329
+msgid ""
+"If you have any problems or any suggestions to improve this plugin, please "
+"let me know."
+msgstr ""
+"Si tienes algún problema o sugerencia para mejorar este plugin, por favor "
+"házmelo saber."
+
+#: ../wpbe.php:333
+msgid "Email template preview"
+msgstr "Vista previa de la plantilla."
+
+#: ../wpbe.php:334
+#, php-format
+msgid "An email preview has been successfully sent to %s"
+msgstr "Una vista previa del email ha sido enviada satisfactoriamente a %s"
+
+#: ../wpbe.php:336
+msgid ""
+"An error occured while sending email. Please check your server configuration."
+msgstr ""
+"Ocurrió un error durante el envío del email. Por favor, comprueba la "
+"configuración de tu servidor."
+
+#: ../wpbe.php:503
+msgid "Some dynamic tags can be included in your email template :"
+msgstr ""
+"Algunas etiquetas dinámicas pueden ser incluídas en tu plantilla de email:"
+
+#: ../wpbe.php:505
+msgid "<strong>%content%</strong> : will be replaced with the message content."
+msgstr ""
+"<strong>%content%</strong> : será sustituído con el contenido del mensaje."
+
+#: ../wpbe.php:506
+msgid ""
+"NOTE: The content tag is <strong>required</strong>, WP Better Emails will be "
+"automatically desactivated if no content tag is found."
+msgstr ""
+"ATENCIÓN: La etiqueta content es <strong>obligatoria</strong>, WP Better "
+"Emails será desactivado automáticamente si no se encuentra dicha etiqueta."
+
+#: ../wpbe.php:507
+msgid "<strong>%blog_url%</strong> : will be replaced with your blog URL."
+msgstr "<strong>%blog_url%</strong> : será sustituído con la URL de tu blog."
+
+#: ../wpbe.php:508
+msgid "<strong>%home_url%</strong> : will be replaced with your home URL."
+msgstr ""
+"<strong>%home_url%</strong> : será sustituído con la URL de tu página de "
+"inicio."
+
+#: ../wpbe.php:509
+msgid "<strong>%blog_name%</strong> : will be replaced with your blog name."
+msgstr ""
+"<strong>%blog_name%</strong> : será sustituído con el nombre de tu blog."
+
+#: ../wpbe.php:510
+msgid ""
+"<strong>%blog_description%</strong> : will be replaced with your blog "
+"description."
+msgstr ""
+"<strong>%blog_description%</strong> : será sustituído con la descripción de "
+"tu blog."
+
+#: ../wpbe.php:511
+msgid "<strong>%admin_email%</strong> : will be replaced with admin email."
+msgstr ""
+"<strong>%admin_email%</strong> : será sustituído con el email del "
+"administrador."
+
+#: ../wpbe.php:512
+msgid ""
+"<strong>%date%</strong> : will be replaced with current date, as formatted "
+"in <a href=\"options-general.php\">general options</a>."
+msgstr ""
+"<strong>%date%</strong> : será sustituído con la fecha actual, con el mismo "
+"formato que en las <a href=\"options-general.php\">opciones generales</a>."
+
+#: ../wpbe.php:513
+msgid ""
+"<strong>%time%</strong> : will be replaced with current time, as formatted "
+"in <a href=\"options-general.php\">general options</a>."
+msgstr ""
+"<strong>%time%</strong> : será sustituído con la hora actual, con el mismo "
+"formato que en las <a href=\"options-general.php\">opciones generales</a>."
+
+#: ../templates/template-1.php:38
+msgid "Date"
+msgstr "Fecha"
+
+#: ../templates/template-1.php:38
+msgid "Email sent"
+msgstr "Email enviado el"
+
+#: ../templates/template-1.php:39
+msgid "Contact"
+msgstr "Contacto"
+
+#: ../templates/template-1.php:39
+msgid "For any requests, please contact"
+msgstr "Para cualquier petición, por favor contacta"
