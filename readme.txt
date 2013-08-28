@@ -48,7 +48,7 @@ WP Better Emails is currently available in :
 * Russian - Vsevolod Bauer
 * Farsi
 * Indonesian
-* Spanish - Kaled Kelevra
+* Spanish - [Kaled Kelevra](http://howly-mowly.com/ "Kaled Kelevra") 
 
 I'm looking for translators to extend to other languages. If you have translated the plugin in your language or want to,
 please let me know : wpbetteremails [ at ] iamnico.la
