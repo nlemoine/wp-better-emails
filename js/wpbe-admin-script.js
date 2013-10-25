@@ -1,7 +1,7 @@
 jQuery(document).ready(function($){
 
 	// Send email preview
-	$('#wpbe_send_preview').click(function(e) {
+	$('#wpbe_send_preview').on('click', this, function(e) {
 		e.preventDefault();
 		var email = $('#wpbe_email_preview_field').val(), message = $('#wpbe_preview_message'), loading = $('#wpbe_ajax_loading');
 		$.ajax({
@@ -25,28 +25,38 @@ jQuery(document).ready(function($){
 	});
 	
 	// Trigger help
-	$('.wpbe_help').bind('click', function(e){
+	$('.wpbe_help').on('click', this, function(e){
 		e.preventDefault();
 		$('a#contextual-help-link').trigger('click');
 	});
     
 	// Thickbox preview
-	$('#wpbe_preview_template').live('click', function(e) {
+	$('#wpbe_preview_template').on('click', this, function(e) {
 		e.preventDefault();
-		var preview_iframe = $('#TB_iframeContent');
-		if( preview_iframe.length ) {
-			var template;
-			if (typeof(tinyMCE) != 'undefined') {
-				if( tinyMCE.activeEditor && !tinyMCE.activeEditor.isHidden() )
-					template = tinyMCE.activeEditor.getContent();
-				else
-					template = $('.wpbe_template').val();
-			}
-			preview_iframe = preview_iframe[preview_iframe.length - 1].contentWindow || frame[preview_iframe.length - 1];
-			preview_iframe.document.open();
-			preview_iframe.document.write( template );
-			preview_iframe.document.close();
+
+		var $this = $(this),
+			title = $this.attr('title'),
+			href = $this.attr('href');
+
+		// Open TB
+		tb_show(title, href);
+		var $previewIframe = $('#TB_iframeContent');
+
+		if( !$previewIframe.length )
+			return;
+
+		var template;
+		if (typeof(tinyMCE) != 'undefined') {
+			if( tinyMCE.activeEditor && !tinyMCE.activeEditor.isHidden() )
+				template = tinyMCE.activeEditor.getContent();
+			else
+				template = $('.wpbe_template').val();
 		}
+			
+		$previewIframe = $previewIframe[$previewIframe.length - 1].contentWindow || frame[$previewIframe.length - 1];
+		$previewIframe.document.open();
+		$previewIframe.document.write( template );
+		$previewIframe.document.close();
 	});
 
 });
