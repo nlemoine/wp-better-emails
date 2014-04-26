@@ -23,13 +23,13 @@ jQuery(document).ready(function($){
 			}
 		});
 	});
-	
+
 	// Trigger help
 	$('.wpbe_help').on('click', this, function(e){
 		e.preventDefault();
 		$('a#contextual-help-link').trigger('click');
 	});
-    
+
 	// Thickbox preview
 	$('#wpbe_preview_template').on('click', this, function(e) {
 		e.preventDefault();
@@ -52,7 +52,7 @@ jQuery(document).ready(function($){
 			else
 				template = $('.wpbe_template').val();
 		}
-			
+
 		$previewIframe = $previewIframe[$previewIframe.length - 1].contentWindow || frame[$previewIframe.length - 1];
 		$previewIframe.document.open();
 		$previewIframe.document.write( template );

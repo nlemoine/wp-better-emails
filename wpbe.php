@@ -3,7 +3,7 @@
 Plugin Name: WP Better Emails
 Plugin URI: http://wordpress.org/extend/plugins/wp-better-emails/
 Description: Beautify the default text/plain WP mails into fully customizable HTML emails.
-Version: 0.2.6.4
+Version: 0.2.6.5
 Author: ArtyShow
 Author URI: http://wordpress.org/extend/plugins/wp-better-emails/
 License: GPLv2
@@ -336,6 +336,9 @@ For any requests, please contact %admin_email%';
 		 * @return string Template with variables replaced
 		 */
 		function template_vars_replacement( $template ) {
+
+
+
 			$to_replace = array(
 				'blog_url'         => get_option('siteurl'),
 				'home_url'         => get_option('home'),
@@ -350,6 +353,7 @@ For any requests, please contact %admin_email%';
 			foreach ( $to_replace as $tag => $var ) {
 				$template = str_replace( '%' . $tag . '%', $var, $template );
 			}
+
 
 			return $template;
 		}
@@ -450,7 +454,7 @@ For any requests, please contact %admin_email%';
 
 			// Replace variables in email
 			$phpmailer->AltBody = apply_filters( 'wpbe_plaintext_body', $this->template_vars_replacement( $phpmailer->AltBody ) );
-			
+
 			if ( $this->send_as_html ) {
 				/** HTML ********************************************************/
 				// Clean < and > around text links in WP 3.1
@@ -465,6 +469,7 @@ For any requests, please contact %admin_email%';
 				// Replace variables in email
 				$phpmailer->Body = apply_filters( 'wpbe_html_body', $this->template_vars_replacement( $phpmailer->Body ) );
 			}
+
 		}
 
 		/**
@@ -611,12 +616,13 @@ For any requests, please contact %admin_email%';
 			} else {
 				// WP >= 3.3
 				$settings = array(
-					'wpautop'      => false,
-					'editor_class' => 'wpbe_template',
-					'quicktags'    => false
+					'wpautop'      	=> false,
+					'editor_class' 	=> 'wpbe_template',
+					'quicktags'    	=> false,
+					'textarea_name' => 'wpbe_options[template]'
 				);
 
-				wp_editor( $this->options['template'], 'wpbe_options[template]', $settings );
+				wp_editor( $this->options['template'], 'wpbe_template', $settings );
 			}
 		}
 
