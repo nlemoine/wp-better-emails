@@ -1,4 +1,4 @@
-<?php 
+<?php
 $template = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 	<head>
@@ -34,7 +34,6 @@ $template = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "htt
 										<table id="footer" width="490" border="0" cellpadding="0" bgcolor="#ffffff" cellspacing="0" style="line-height:1.5;font-size:12px;font-family: Arial, sans-serif;margin-right:30px;margin-left:30px;">
 											<tr style="font-size:11px;color:#999999;">
 												<td style="border-top: solid 1px #d9d9d9;" colspan="2">
-													<img style="padding-top:28px;" height="16" width="16" src="'. admin_url('/images/wp-logo.png') . '" align="right" alt="WP" />
 													<div style="padding-top:15px; padding-bottom:1px;"><img height="13" width="13" style="vertical-align: middle;" src="' . admin_url('images/date-button.gif') . '" alt="' . esc_attr__('Date', 'wp-better-emails') . '"  /> ' . esc_attr__('Email sent', 'wp-better-emails') . ' %date% @ %time%</div>
 													<div><img height="12" width="12" style="vertical-align: middle;" src="' . admin_url('images/comment-grey-bubble.png') . '" alt="' . esc_attr__('Contact', 'wp-better-emails') . '"  /> ' . __('For any requests, please contact', 'wp-better-emails') . ' <a href="mailto:%admin_email%">%admin_email%</a></div>
 												</td>

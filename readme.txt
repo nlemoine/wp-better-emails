@@ -2,10 +2,10 @@
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=7Q49VJQNRCQ8E&lc=FR&item_name=ArtyShow&item_number=wp%2dbetter%2demails&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 Tags: email, emails, html emails, templates, notification, wp_mail, wpmu, multisite
 Requires at least: 2.8
-Tested up to: 3.9
-Stable tag: 0.2.6.5
+Tested up to: 4.0
+Stable tag: 0.2.6.6
 
-Adds a customizable good looking HTML template to all WP default plain/text emails and lets you set
+Adds a customizable good looking HTML template to all WP default text/plain emails and lets you set
  a custom sender name and email address.
 
 == Description ==
@@ -50,9 +50,10 @@ WP Better Emails is currently available in :
 * Indonesian
 * Spanish - [Kaled Kelevra](http://howly-mowly.com/ "Kaled Kelevra")
 * Swedish - [Andréas Lundgren](http://adevade.com/ "Andréas Lundgren")
+* Dutch - [Paul Romijn](http://www.bluecloudcompany.com/)
 
 I'm looking for translators to extend to other languages. If you have translated the plugin in your language or want to,
-please let me know : wpbetteremails [ at ] iamnico.la
+please let me know : wpbetteremails [ at ] helloni.co
 
 = Contributing =
 
@@ -98,11 +99,15 @@ is found, sending HTML emails is automatically desactivated.
 
 = How does WP Better Emails interact with others plugins ? =
 
-WP Better Emails wraps every "plain/text" email sent with the Wordpress function `wp_mail()`.
+WP Better Emails wraps every "text/plain" email sent with the Wordpress function `wp_mail()`.
 
 = I totally messed up with the template, how can I get the original one ? =
 
 Just delete and reinstall the plugin from the admin panel.
+
+= I'm using SB Welcome Editor and emails have no template =
+
+WP Better Emails only wraps "text/plain" emails. By default, SB Welcome Editor sends email as HTML, with no style but as "text/html". Be sure to set the SB Welcome Editor format option to "text".
 
 = How can I add my own tags ? =
 
@@ -130,10 +135,14 @@ You can place this function in your functions.php theme file or in a plugin.
 
 == Changelog ==
 
+= 0.2.6.6 =
+
+* New translation: Dutch
+
 = 0.2.6.5 =
 
 * Fixed editor (WordPress 3.9 compatibility issue)
-* New translation : Swedish
+* New translation: Swedish
 
 = 0.2.6.4 =
 
@@ -141,18 +150,18 @@ You can place this function in your functions.php theme file or in a plugin.
 
 = 0.2.6.3 =
 
-* New translation : Spanish
+* New translation: Spanish
 
 = 0.2.6.2 =
 
-* New translation : Indonesian
-* Fixed translation : Arabic, Farsi
+* New translation: Indonesian
+* Fixed translation: Arabic, Farsi
 
 = 0.2.6.1 =
 
-* New translation : Farsi
-* New translation : Russian
-* Updated transaltion : German
+* New translation: Farsi
+* New translation: Russian
+* Updated transaltion: German
 
 = 0.2.6 =
 
