@@ -3,7 +3,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=7Q49V
 Tags: email, emails, html emails, templates, notification, wp_mail, wpmu, multisite
 Requires at least: 2.8
 Tested up to: 4.0
-Stable tag: 0.2.6.6
+Stable tag: 0.2.7
 
 Adds a customizable good looking HTML template to all WP default text/plain emails and lets you set
  a custom sender name and email address.
@@ -19,6 +19,7 @@ nicely in your recipient mailbox. But you can of course design your own.
 * WP Better Emails lets you send sample emails to test and preview your own custom HTML email template.
 * Watch your HTML email template during editing with the live preview.
 * Fancy HTML editor with CodeMirror syntax highlighting.
+* Supports WpMandrill plugin
 * All emails sent by this plugin are sent as 'multipart' so that email clients that don't support HTML can read them.
 * Include some dynamic tags in your template such as your blog URL, home URL, blog name, blog description, admin email or date and time. They will all be
 replaced when sending the email.
@@ -51,6 +52,7 @@ WP Better Emails is currently available in :
 * Spanish - [Kaled Kelevra](http://howly-mowly.com/ "Kaled Kelevra")
 * Swedish - [Andréas Lundgren](http://adevade.com/ "Andréas Lundgren")
 * Dutch - [Paul Romijn](http://www.bluecloudcompany.com/)
+* Slovenian - Primož Troha
 
 I'm looking for translators to extend to other languages. If you have translated the plugin in your language or want to,
 please let me know : wpbetteremails [ at ] helloni.co
@@ -135,14 +137,20 @@ You can place this function in your functions.php theme file or in a plugin.
 
 == Changelog ==
 
+= 0.2.7 =
+
+* Added translation: Slovenian
+* Fixed bug in Dutch translation. See: https://wordpress.org/support/topic/saving-changes-to-the-email-template
+* Added support for WpMandrill. See: https://wordpress.org/support/topic/plug-in-does-not-sent-html-mail-only-text
+
 = 0.2.6.6 =
 
-* New translation: Dutch
+* Added translation: Dutch
 
 = 0.2.6.5 =
 
 * Fixed editor (WordPress 3.9 compatibility issue)
-* New translation: Swedish
+* Added translation: Swedish
 
 = 0.2.6.4 =
 
@@ -150,11 +158,11 @@ You can place this function in your functions.php theme file or in a plugin.
 
 = 0.2.6.3 =
 
-* New translation: Spanish
+* Added translation: Spanish
 
 = 0.2.6.2 =
 
-* New translation: Indonesian
+* Added translation: Indonesian
 * Fixed translation: Arabic, Farsi
 
 = 0.2.6.1 =
@@ -171,7 +179,7 @@ You can place this function in your functions.php theme file or in a plugin.
 
 * Added plain text template support
 * Fixed phpmailer_init action
-* Brazilian portuguese translation added
+* Added Brazilian portuguese translation
 
 = 0.2.4.1 =
 
@@ -190,7 +198,7 @@ You can place this function in your functions.php theme file or in a plugin.
 = 0.2.2 =
 
  * Added 3.3 compatibility
- * Turkish translation
+ * Added Turkish translation
 
 = 0.2.1 =
 
@@ -203,7 +211,7 @@ You can place this function in your functions.php theme file or in a plugin.
  * Live preview (> WP 3.1)
  * Include filter to add your own tag replacements
  * Help moved to contextual help
- * Translations for german, hebrew
+ * Added translations for german, hebrew
  * Improved template email clients support
 
 = 0.1.3 =
@@ -215,7 +223,8 @@ You can place this function in your functions.php theme file or in a plugin.
  * Dutch translation
 
 = 0.1.1 =
- * French translation added
+ * Added French translation
 
 = 0.1 =
  * WP Better Emails first release
+
