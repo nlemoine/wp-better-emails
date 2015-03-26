@@ -2,8 +2,8 @@
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=7Q49VJQNRCQ8E&lc=FR&item_name=ArtyShow&item_number=wp%2dbetter%2demails&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 Tags: email, emails, html emails, templates, notification, wp_mail, wpmu, multisite
 Requires at least: 2.8
-Tested up to: 4.0
-Stable tag: 0.2.7
+Tested up to: 4.1
+Stable tag: 0.2.8
 
 Adds a customizable good looking HTML template to all WP default text/plain emails and lets you set
  a custom sender name and email address.
@@ -53,6 +53,7 @@ WP Better Emails is currently available in :
 * Swedish - [Andréas Lundgren](http://adevade.com/ "Andréas Lundgren")
 * Dutch - [Paul Romijn](http://www.bluecloudcompany.com/)
 * Slovenian - Primož Troha
+* Vietnamese - Tim N.
 
 I'm looking for translators to extend to other languages. If you have translated the plugin in your language or want to,
 please let me know : wpbetteremails [ at ] helloni.co
@@ -136,6 +137,11 @@ You can place this function in your functions.php theme file or in a plugin.
 5. Help tab with information about available tags.
 
 == Changelog ==
+
+= 0.2.8 =
+
+* Added translation: Vietnamese
+* Fixed bug in plain text email. See: https://wordpress.org/support/topic/content-in-plain-message-empty?replies=4
 
 = 0.2.7 =
 
