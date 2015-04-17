@@ -62,6 +62,6 @@
 		<p><?php printf(__('If you have any idea to improve this plugin or any bug to report, please email me at : <a href="%1$s">%2$s</a>', 'wp-better-emails'), 'mailto:wpbetteremails@iamnico.la?subject=[wp-better-emails]', 'wpbetteremails@iamnico.la'); ?></p>
 		<?php $donation_link = 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=7Q49VJQNRCQ8E&lc=FR&item_name=ArtyShow&item_number=wp%2dbetter%2demails&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted'; ?>
 		<p><?php printf(__('You like this plugin ? You use it in a business context ? Please, consider a <a href="%s" target="_blank" rel="external">donation</a>.', 'wp-better-emails'), $donation_link ); ?></p>
-		<p><?php printf(__('You can still provide some support by <a href="%1$s" target="_blank">voting for it</a> and/or says that <a href="%2$s" target="_blank">it works</a> for your WordPress installation on the official WordPress plugins repository.', 'wp-better-emails'), 'http://wordpress.org/plugins/wp-better-emails/', 'http://wordpress.org/plugins/wp-better-emails/'); ?></p>
+		<p><?php printf(__('You can still provide some support by <a href="%1$s" target="_blank">voting for it</a> and/or says that <a href="%2$s" target="_blank">it works</a> for your WordPress installation on the official WordPress plugins repository.', 'wp-better-emails'), 'https://wordpress.org/support/view/plugin-reviews/wp-better-emails?rate=5#postform', 'https://wordpress.org/plugins/wp-better-emails/'); ?></p>
 	</div>
 </div>
