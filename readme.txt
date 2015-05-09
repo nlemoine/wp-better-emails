@@ -98,7 +98,7 @@ WP Better Emails sends all emails in both formats ('multipart', i.e. HTML and pl
 = Why are the emails still sent in plain text format ? =
 
 Be sure to include the **%content%** tag in your template. WP Better Emails wrap the content with the template, if no tag
-is found, sending HTML emails is automatically desactivated.
+is found, sending HTML emails is automatically deactivated.
 
 = How does WP Better Emails interact with others plugins ? =
 
