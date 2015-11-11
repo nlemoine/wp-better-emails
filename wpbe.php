@@ -65,6 +65,7 @@ if ( ! class_exists( 'WP_Better_Emails' ) ) {
 			load_plugin_textdomain( 'wp-better-emails', null, basename( dirname( __FILE__ ) ) . '/langs/' );
 
 			// Actions
+			add_action( 'init',                 array( $this, 'set_options' ) );
 			add_action( 'admin_init',           array( $this, 'init' ) );
 			add_action( 'admin_menu',           array( $this, 'admin_menu' ) );
 			add_action( 'wp_ajax_send_preview', array( $this, 'ajax_send_preview' ) );
@@ -99,6 +100,11 @@ if ( ! class_exists( 'WP_Better_Emails' ) ) {
 		 * @since 0.2
 		 */
 		function set_options() {
+		
+			// If option doesn't exist, create and save default option
+			if ( get_option( 'wpbe_options' ) !== false ){
+				return;
+			}
 
 			// HTML default template
 			$template = '';
@@ -120,10 +126,7 @@ For any requests, please contact %admin_email%';
 				'plaintext_template' => $plaintext
 			);
 
-			// If option doesn't exist, save default option
-			if ( get_option( 'wpbe_options' ) === false ) {
-				add_option( 'wpbe_options', $this->options );
-			}
+			add_option( 'wpbe_options', $this->options );
 		}
 
 		/**
@@ -166,8 +169,6 @@ For any requests, please contact %admin_email%';
 
 				wp_die( __( 'WP Better Emails requires WordPress 2.8 or newer.', 'wp-better-emails' ), __( 'Upgrade your Wordpress installation.', 'wp-better-emails' ) );
 			}
-
-			$this->set_options();
 		}
 
 		/**
@@ -688,6 +689,4 @@ For any requests, please contact %admin_email%';
 if ( class_exists( 'WP_Better_Emails' ) ) {
 	$wp_better_emails = new WP_Better_Emails();
 	register_activation_hook( __FILE__, array( $wp_better_emails, 'install' ) );
-}
-
 }
