@@ -101,10 +101,10 @@ if ( ! class_exists( 'WP_Better_Emails' ) ) {
 		 */
 		function set_options() {
 		
-      // If option doesn't exist, create and save default option
-      if ( get_option( 'wpbe_options' ) !== false ){
-        return;
-      }
+			// If option doesn't exist, create and save default option
+			if ( get_option( 'wpbe_options' ) !== false ){
+				return;
+			}
 
 			// HTML default template
 			$template = '';
