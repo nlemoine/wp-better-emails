@@ -433,6 +433,8 @@ For any requests, please contact %admin_email%';
 				return $content_type = 'text/html';
 			} else {
 				$this->send_as_html = false;
+				remove_filter( 'wp_mail_from_name',    array( $this, 'set_from_name' ) );
+				remove_filter( 'wp_mail_from',         array( $this, 'set_from_email' ) );
 			}
 			return $content_type;
 		}
@@ -688,6 +690,4 @@ For any requests, please contact %admin_email%';
 if ( class_exists( 'WP_Better_Emails' ) ) {
 	$wp_better_emails = new WP_Better_Emails();
 	register_activation_hook( __FILE__, array( $wp_better_emails, 'install' ) );
-}
-
 }
