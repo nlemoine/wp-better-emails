@@ -27,7 +27,7 @@ jQuery(document).ready(function($){
 	// Trigger help
 	$('.wpbe_help').on('click', this, function(e){
 		e.preventDefault();
-		$('a#contextual-help-link').trigger('click');
+		$('#contextual-help-link').trigger('click');
 	});
 
 	// Thickbox preview

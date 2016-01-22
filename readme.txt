@@ -1,32 +1,38 @@
 === WP Better Emails ===
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=7Q49VJQNRCQ8E&lc=FR&item_name=ArtyShow&item_number=wp%2dbetter%2demails&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
-Tags: email, emails, html emails, templates, notification, wp_mail, wpmu, multisite
+Tags: email, emails, html emails, templates, notification, wp_mail, wpmu, multisite, html template
 Requires at least: 2.8
-Tested up to: 4.1
-Stable tag: 0.2.8
+Tested up to: 4.4.1
+Stable tag: 0.3
 
-Adds a customizable good looking HTML template to all WP default text/plain emails and lets you set a custom sender name and email address.
+Adds a customizable good looking HTML template to all WP default text/plain emails and lets you set
+ a custom sender name and email address.
 
 == Description ==
 
-All emails from Wordpress (lost password, notifications, etc.) are sent by default in text/plain format. WP Better Emails wraps them with a much better looking customizable **HTML email template** and lets you also set your own **sender name** and **email address**.
+All emails from Wordpress (lost password, notifications, etc.) are sent by default in text/plain format. WP Better
+Emails wraps them with a much better looking customizable **HTML email template** and lets you also set your own **sender name** and **email address**.
 
-* WP Better Emails comes with a default simple and clean template that has been tested on various and popular email clients like Gmail, Yahoo Mail, Hotmail/Live, AOL, Outlook, Apple Mail and many more. This to ensure your emails will always display nicely in your recipient mailbox. But you can of course design your own.
+* WP Better Emails comes with a default simple and clean template that has been tested on various and popular email clients
+ like Gmail, Yahoo Mail, Hotmail/Live, AOL, Outlook, Apple Mail and many more. This to ensure your emails will always display
+nicely in your recipient mailbox. But you can of course design your own.
 * WP Better Emails lets you send sample emails to test and preview your own custom HTML email template.
 * Watch your HTML email template during editing with the live preview.
 * Fancy HTML editor with CodeMirror syntax highlighting.
 * Supports WpMandrill plugin
 * All emails sent by this plugin are sent as 'multipart' so that email clients that don't support HTML can read them.
-* Include some dynamic tags in your template such as your blog URL, home URL, blog name, blog description, admin email or date and time. They will all be replaced when sending the email.
+* Include some dynamic tags in your template such as your blog URL, home URL, blog name, blog description, admin email or date and time. They will all be
+replaced when sending the email.
 * Add your own tags with Wordpress filters (see [FAQ](http://wordpress.org/extend/plugins/wp-better-emails/faq/) for usage).
 * The default template is included as an HTML file in the plugin folder, feel free to edit it with your favorite editor.
 * Clean uninstall process, doesn't leave some useless data in your database when deleted, you can easily give it a try !
 
 = Example usages : =
 
+* Brand your emails to your website or client website
 * Add some ads/sponsored links to every email sent with wordpress
 * Include some banners to promote a special event or feature of your website
-* Brand your emails to your website or client website
+
 
 = Internationalization =
 
@@ -50,7 +56,13 @@ WP Better Emails is currently available in :
 * Slovenian - Primož Troha
 * Vietnamese - Tim N.
 
-I'm looking for translators to extend to other languages. If you have translated the plugin in your language or want to, please let me know : wpbetteremails [ at ] helloni.co
+I'm looking for translators to extend to other languages. If you have translated the plugin in your language or want to,
+please let me know : wpbetteremails [ at ] helloni.co
+
+= Support =
+
+This plugin is free and developed on my spare time. Please consider reading the [FAQ](https://wordpress.org/plugins/wp-better-emails/faq/) and the [support guide](https://wordpress.org/support/topic/support-guide-read-me-before-posting?replies=1) before posting new topics. Many of them have already been resolved.
+
 
 = Contributing =
 
@@ -85,15 +97,16 @@ Just use the Wordpress automatic plugin update system
 
 == Frequently Asked Questions ==
 
-= What if the recipient can't read HTML emails ? =
+= What if recipient can't read HTML emails ? =
 
 WP Better Emails sends all emails in both formats ('multipart', i.e. HTML and plain text) so that emails can be displayed in every email client.
 
 = Why are the emails still sent in plain text format ? =
 
-Be sure to include the **%content%** tag in your template. WP Better Emails wrap the content with the template, if no tag is found, sending HTML emails is automatically desactivated.
+Be sure to include the **%content%** tag in your template. WP Better Emails wrap the content with the template, if no tag
+is found, sending HTML emails is automatically desactivated.
 
-= How does WP Better Emails interact with other plugins ? =
+= How does WP Better Emails interact with others plugins ? =
 
 WP Better Emails wraps every "text/plain" email sent with the Wordpress function `wp_mail()`.
 
@@ -121,6 +134,14 @@ The key of the array `sponsored_link` will be a new tag (`%sponsored_link%`) you
 The example above is taking sponsored links as an additinonal content but you can imagine anything like including lastest posts, a quote of the day or whatever.
 You can place this function in your functions.php theme file or in a plugin.
 
+= Do you provide hooks to alter some WP Better Emails behaviors? =
+
+* wpbe_html_body (filter) will let you apply your own logic on HTML emails
+* wpbe_plaintext_body (filter) will let you apply your own logic on plain text emails
+* wpbe_convert_line_breaks (filter) will let remove line breaks conversion
+* wpbe_convert_urls (filter) will let you remove links conversion
+
+
 == Screenshots ==
 
 1. The default template provided with WP Better Emails. Tested on many email clients like Gmail, Yahoo!, Live/Hotmail, etc.
@@ -130,6 +151,14 @@ You can place this function in your functions.php theme file or in a plugin.
 5. Help tab with information about available tags.
 
 == Changelog ==
+
+= 0.3 =
+
+* Add proper multisite support: options are saved network wide
+* Remove strip_tags from message as it deletes password retrieve link from lost password email (see: https://wordpress.org/support/topic/password-reset-url-in-plain-version-password-reset-emails-not-showing?replies=3)
+* Improve from name and email, they are only set when default email is used
+* Fix help tab link
+* Add new filters to control converting line breaks to `br` tags and URls to links
 
 = 0.2.8 =
 

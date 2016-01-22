@@ -3,8 +3,8 @@
 Plugin Name: WP Better Emails
 Plugin URI: http://wordpress.org/extend/plugins/wp-better-emails/
 Description: Beautify the default text/plain WP mails into fully customizable HTML emails.
-Version: 0.2.8
-Author: ArtyShow
+Version: 0.3
+Author: Nicolas Lemoine
 Author URI: http://wordpress.org/extend/plugins/wp-better-emails/
 License: GPLv2
  */
@@ -52,14 +52,14 @@ if ( ! class_exists( 'WP_Better_Emails' ) ) {
 			$this->get_options();
 
 			// Front end filter
-			add_filter( 'wp_mail_from_name',    array( $this, 'set_from_name' ) );
-			add_filter( 'wp_mail_from',         array( $this, 'set_from_email' ) );
+			add_filter( 'wp_mail_from',         array( $this, 'set_from' ) );
 			add_filter( 'wp_mail_content_type', array( $this, 'set_content_type' ), 100 );
 			add_action( 'phpmailer_init',   array( $this, 'send_html' ) );
 			add_filter( 'mandrill_payload', array( $this, 'wpmandrill_compatibility' ) );
 
-			if ( ! is_admin() )
+			if ( ! is_admin() ) {
 				return;
+			}
 
 			// Load translations
 			load_plugin_textdomain( 'wp-better-emails', null, basename( dirname( __FILE__ ) ) . '/langs/' );
@@ -69,11 +69,13 @@ if ( ! class_exists( 'WP_Better_Emails' ) ) {
 			add_action( 'admin_menu',           array( $this, 'admin_menu' ) );
 			add_action( 'wp_ajax_send_preview', array( $this, 'ajax_send_preview' ) );
 
-			if ( version_compare( $wp_version, '3.2.1', '<=' ) )
+			if ( version_compare( $wp_version, '3.2.1', '<=' ) ) {
 				add_action( 'admin_head', array( $this, 'load_wp_tiny_mce' ) );
+			}
 
-			if ( version_compare( $wp_version, '3.2', '<' ) && version_compare( $wp_version, '3.0.6', '>' ) )
+			if ( version_compare( $wp_version, '3.2', '<' ) && version_compare( $wp_version, '3.0.6', '>' ) ) {
 				add_action( 'admin_print_footer_scripts', 'wp_tiny_mce_preload_dialogs' );
+			}
 
 			// Filters
 			add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), array( $this, 'settings_link' ) );
@@ -157,7 +159,7 @@ For any requests, please contact %admin_email%';
 		 * @since 0.1
 		 * @global $wp_version
 		 */
-		function install() {
+		function activate() {
 			global $wp_version;
 			// Prevent activation if requirements are not met
 			// WP 2.8 required
@@ -167,7 +169,20 @@ For any requests, please contact %admin_email%';
 				wp_die( __( 'WP Better Emails requires WordPress 2.8 or newer.', 'wp-better-emails' ), __( 'Upgrade your Wordpress installation.', 'wp-better-emails' ) );
 			}
 
-			$this->set_options();
+			if ( ! is_multisite() ) {
+				$this->set_options();
+			} else {
+				global $wpdb;
+				$all_blogs = $wpdb->get_col( "SELECT blog_id FROM $wpdb->blogs" );
+				if ( is_array( $all_blogs ) && $all_blogs !== array() ) {
+					foreach ( $all_blogs as $blog_id ) {
+						switch_to_blog( $blog_id );
+						$this->set_options();
+						restore_current_blog();
+					}
+				}
+			}
+
 		}
 
 		/**
@@ -192,8 +207,9 @@ For any requests, please contact %admin_email%';
 		function is_wpbe_page() {
 			global $page_hook;
 
-			if ( $page_hook === $this->page )
+			if ( $page_hook === $this->page ) {
 				return true;
+			}
 
 			return false;
 		}
@@ -288,7 +304,6 @@ For any requests, please contact %admin_email%';
 
 			$input['plaintext_template'] = $input['plaintext_template'];
 
-
 			return $input;
 		}
 
@@ -299,18 +314,21 @@ For any requests, please contact %admin_email%';
 		 * @param string $email
 		 */
 		function ajax_send_preview( $email ) {
-			if ( ! current_user_can( 'manage_options' ) )
+			if ( ! current_user_can( 'manage_options' ) ) {
 				die();
+			}
 
 			check_ajax_referer( 'email_preview' );
 
 			$preview_email = sanitize_email( $_POST['preview_email'] );
 
-			if ( empty( $preview_email ) )
+			if ( empty( $preview_email ) ) {
 				die( '<div class="error"><p>' . __( 'Please enter an email', 'wp-better-emails' ) . '</p></div>' );
+			}
 
-			if ( ! is_email( $preview_email ) )
+			if ( ! is_email( $preview_email ) ) {
 				die( '<div class="error"><p>' . __( 'Please enter a valid email', 'wp-better-emails' ) . '</p></div>' );
+			}
 
 			// Setup preview message content
 			$message = __( 'Hey !', 'wp-better-emails' );
@@ -392,16 +410,33 @@ For any requests, please contact %admin_email%';
 		}
 
 		/**
-		 * Replaces sender email if set & valid
+		 * Get default from email
+		 * Copy pasted from wp_mail
 		 *
-		 * @since 0.1
-		 * @param string $from_email
-		 * @return string
+		 * @see wp_mail
+		 * @return string Default from email
 		 */
-		function set_from_email( $from_email ) {
-			if ( ! empty( $this->options['from_email'] ) && is_email( $this->options['from_email'] ) )
-				return $this->options['from_email'];
+		function get_default_from_email() {
+			$sitename = strtolower( $_SERVER['SERVER_NAME'] );
+			if ( substr( $sitename, 0, 4 ) == 'www.' ) {
+				$sitename = substr( $sitename, 4 );
+			}
+			return 'wordpress@' . $sitename;
+		}
 
+		/**
+		 * Set from email and from name only in case default email and name is used
+		 *
+		 * @param string $from_email From email
+		 */
+		function set_from( $from_email ) {
+			// Only apply custom from name and email if default email is used
+			if( $this->get_default_from_email() === $from_email ) {
+				add_filter( 'wp_mail_from_name',    array( $this, 'set_from_name' ) );
+				if ( ! empty( $this->options['from_email'] ) && is_email( $this->options['from_email'] ) ) {
+					return $this->options['from_email'];
+				}
+			}
 			return $from_email;
 		}
 
@@ -413,8 +448,9 @@ For any requests, please contact %admin_email%';
 		 * @return string
 		 */
 		function set_from_name( $from_name ) {
-			if ( ! empty( $this->options['from_name'] ) )
+			if ( ! empty( $this->options['from_name'] ) ) {
 				return wp_specialchars_decode( $this->options['from_name'], ENT_QUOTES );
+			}
 
 			return $from_name;
 		}
@@ -477,7 +513,7 @@ For any requests, please contact %admin_email%';
 		 */
 		function process_email_text( $message ) {
 
-			$message = strip_tags( $message );
+			//$message = strip_tags( $message );
 
 			// Decode body
 			$message = wp_specialchars_decode( $message, ENT_QUOTES );
@@ -503,8 +539,15 @@ For any requests, please contact %admin_email%';
 			// Clean < and > around text links in WP 3.1
 			$message = $this->esc_textlinks( $message );
 
-			// Convert line breaks & make links clickable
-			$message = nl2br( make_clickable( $message ) );
+			// Convert line breaks
+			if( apply_filters( 'wpbe_convert_line_breaks', true ) ) {
+				$message = nl2br( $message );
+			}
+
+			// Convert URLs to links
+			if( apply_filters( 'wpbe_convert_urls', true ) ) {
+				$message = make_clickable( $message );
+			}
 
 			// Add template to message
 			$message = $this->set_email_template( $message );
@@ -537,8 +580,9 @@ For any requests, please contact %admin_email%';
 		 * @param string $screen
 		 */
 		function contextual_help( $contextual_help, $screen_id, $screen ) {
-			if ( ! $this->is_wpbe_page() )
+			if ( ! $this->is_wpbe_page() ) {
 				return $contextual_help;
+			}
 
 			return '<p>' . __( 'Some dynamic tags can be included in your email template :', 'wp-better-emails' ) . '</p>
 					<ul>
@@ -568,8 +612,9 @@ For any requests, please contact %admin_email%';
 		function tinymce_plugins( $external_plugins ) {
 			global $wp_version;
 
-			if ( ! $this->is_wpbe_page() )
+			if ( ! $this->is_wpbe_page() ) {
 				return $external_plugins;
+			}
 
 			$fullpage = array();
 
@@ -602,8 +647,9 @@ For any requests, please contact %admin_email%';
 		 * @return type
 		 */
 		function tinymce_buttons( $buttons ) {
-			if ( $this->is_wpbe_page() )
+			if ( $this->is_wpbe_page() ) {
 				array_push( $buttons, 'cmseditor' );
+			}
 
 			return $buttons;
 		}
@@ -621,8 +667,9 @@ For any requests, please contact %admin_email%';
 			$init['remove_linebreaks'] = false;
 			$init['content_css']       = ''; // WP =< 3.0
 
-			if ( isset( $init['extended_valid_elements'] ) )
+			if ( isset( $init['extended_valid_elements'] ) ) {
 				$init['extended_valid_elements'] = $init['extended_valid_elements'] . ',td[*]';
+			}
 
 			return $init;
 		}
@@ -633,8 +680,9 @@ For any requests, please contact %admin_email%';
 		 * @since 0.2
 		 */
 		function load_wp_tiny_mce() {
-			if ( ! $this->is_wpbe_page() )
+			if ( ! $this->is_wpbe_page() ) {
 				return;
+			}
 
 			$settings = array(
 				'editor_selector' => 'wpbe_template',
@@ -687,7 +735,5 @@ For any requests, please contact %admin_email%';
 
 if ( class_exists( 'WP_Better_Emails' ) ) {
 	$wp_better_emails = new WP_Better_Emails();
-	register_activation_hook( __FILE__, array( $wp_better_emails, 'install' ) );
-}
-
+	register_activation_hook( __FILE__, array( $wp_better_emails, 'activate' ) );
 }
