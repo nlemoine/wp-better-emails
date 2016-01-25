@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<ruleset name="WP Better Emails">
+	<description>Coding standards of the WP Better Emails plugin</description>
+
+	<file>.</file>
+
+	<exclude-pattern>node_modules/*</exclude-pattern>
+	<exclude-pattern>vendor/*</exclude-pattern>
+
+	<arg name="extensions" value="php" />
+
+	<rule ref="WordPress-Core"/>
+	<rule ref="WordPress-Extra"/>
+	<rule ref="WordPress-VIP"/>
+
+</ruleset>

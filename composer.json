@@ -1,0 +1,44 @@
+{
+    "name": "nlemoine/wp-better-emails",
+    "type": "wordpress-plugin",
+    "license": "MIT",
+    "description": "Beautify the default text/plain WordPress emails into fully customizable HTML emails.",
+    "homepage": "https://wordpress.org/plugins/wp-better-emails/",
+    "support": {
+        "issues": "https://github.com/nlemoine/wp-better-emails/issues",
+        "source": "https://github.com/nlemoine/wp-better-emails.git"
+    },
+    "authors": [
+        {
+            "name": "Nicolas Lemoine",
+            "email": "wpbetteremails@helloni.co",
+            "homepage": "https://github.com/nlemoine"
+        }
+    ],
+    "keywords": [
+        "wordpress",
+        "email",
+        "email template",
+        "html template"
+    ],
+    "prefer-stable": true,
+    "require": {
+        "composer/installers": "v1.0.6",
+        "php": ">=5.3.0"
+    },
+    "require-dev": {
+        "wp-coding-standards/wpcs": "dev-develop",
+        "sebastian/phpcpd": "~2.0@dev"
+    },
+    "scripts": {
+    "configure-phpcs": [
+            "if [ -f vendor/bin/phpcs ]; then \"vendor/bin/phpcs\" --config-set installed_paths vendor/wp-coding-standards/wpcs; fi",
+            "if [ -f vendor/bin/phpcs ]; then \"vendor/bin/phpcs\" --config-set colors 1; fi",
+            "if [ -f vendor/bin/phpcs ]; then \"vendor/bin/phpcs\" --config-set show_progress 0; fi",
+            "if [ -f vendor/bin/phpcs ]; then \"vendor/bin/phpcs\" --config-set report_width auto; fi",
+            "if [ -f vendor/bin/phpcs ]; then \"vendor/bin/phpcs\" --config-set encoding utf-8; fi"
+        ],
+        "post-install-cmd": "@configure-phpcs",
+        "post-update-cmd":  "@configure-phpcs"
+    }
+}
