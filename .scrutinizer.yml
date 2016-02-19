@@ -7,5 +7,6 @@ filter:
 checks:
   php:
     code_rating: true
+    duplication: true
     coding_standard:
       name: WordPress
