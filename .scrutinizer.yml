@@ -1,0 +1,11 @@
+filter:
+  excluded_paths:
+    - tests/*
+    - vendor/*
+    - bin/*
+
+checks:
+  php:
+    code_rating: true
+    coding_standard:
+        name: WordPress
