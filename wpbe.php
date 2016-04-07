@@ -587,7 +587,7 @@ For any requests, please contact %admin_email%';
 				return $contextual_help;
 			}
 
-			return '<p>' . __( 'Some dynamic tags can be included in your email template :', 'wp-better-emails' ) . '</p>
+			$help_content = '<p>' . __( 'Some dynamic tags can be included in your email template :', 'wp-better-emails' ) . '</p>
 					<ul>
 						<li>' . __( '<strong>%subject%</strong> : will be replaced with the emails Subject.', 'wp-better-emails' ) . '</li>
 						<li>' . __( '<strong>%content%</strong> : will be replaced with the message content.', 'wp-better-emails' ) . '<br />
@@ -600,6 +600,15 @@ For any requests, please contact %admin_email%';
 						<li>' . __( '<strong>%date%</strong> : will be replaced with current date, as formatted in <a href="options-general.php">general options</a>.', 'wp-better-emails' ) . '</li>
 						<li>' . __( '<strong>%time%</strong> : will be replaced with current time, as formatted in <a href="options-general.php">general options</a>.', 'wp-better-emails' ) . '</li>
 					</ul>';
+
+		    $screen->add_help_tab( array(
+		        'id'      => 'help-wp-better-emails',
+		        'title'   => 'Template Tags',
+		        'content' => $help_content,
+		    ));
+
+		    return $contextual_help;
+
 		}
 
 		/**
