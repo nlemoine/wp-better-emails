@@ -357,12 +357,15 @@ For any requests, please contact %admin_email%';
 		 */
 		function template_vars_replacement( $template ) {
 
+			global $phpmailer;
+
 			$to_replace = array(
 				'blog_url'         => get_option( 'siteurl' ),
 				'home_url'         => get_option( 'home' ),
 				'blog_name'        => get_option( 'blogname' ),
 				'blog_description' => get_option( 'blogdescription' ),
 				'admin_email'      => get_option( 'admin_email' ),
+				'subject'          => $phpmailer->Subject,
 				'date'             => date_i18n( get_option( 'date_format' ) ),
 				'time'             => date_i18n( get_option( 'time_format' ) )
 			);
@@ -391,7 +394,7 @@ For any requests, please contact %admin_email%';
 		/**
 		 * Add the template to the message body.
 		 *
-		 * Looks for %message% into the template and replaces it with the message.
+		 * Looks for %subject% and %content% in the template and replaces them appropriately.
 		 *
 		 * @since 0.1
 		 * @param string $body The message to templatize
@@ -586,6 +589,7 @@ For any requests, please contact %admin_email%';
 
 			return '<p>' . __( 'Some dynamic tags can be included in your email template :', 'wp-better-emails' ) . '</p>
 					<ul>
+						<li>' . __( '<strong>%subject%</strong> : will be replaced with the emails Subject.', 'wp-better-emails' ) . '</li>
 						<li>' . __( '<strong>%content%</strong> : will be replaced with the message content.', 'wp-better-emails' ) . '<br />
 						<span class="description"> ' . __( 'NOTE: The content tag is <strong>required</strong>, WP Better Emails will be automatically desactivated if no content tag is found.', 'wp-better-emails' ) . '</span></li>
 						<li>' . __( '<strong>%blog_url%</strong> : will be replaced with your blog URL.', 'wp-better-emails' ) . '</li>
