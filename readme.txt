@@ -10,7 +10,7 @@ Adds a customizable good looking HTML template to all WP default text/plain emai
 
 == Description ==
 
-All emails from Wordpress (lost password, notifications, etc.) are sent by default in text/plain format. WP Better
+All emails from WordPress (lost password, notifications, etc.) are sent by default in text/plain format. WP Better
 Emails wraps them with a much better looking customizable **HTML email template** and lets you also set your own **sender name** and **email address**.
 
 * WP Better Emails comes with a default simple and clean template that has been tested on various and popular email clients
@@ -23,14 +23,14 @@ nicely in your recipient mailbox. But you can of course design your own.
 * All emails sent by this plugin are sent as 'multipart' so that email clients that don't support HTML can read them.
 * Include some dynamic tags in your template such as your blog URL, home URL, blog name, blog description, admin email or date and time. They will all be
 replaced when sending the email.
-* Add your own tags with Wordpress filters (see [FAQ](http://wordpress.org/extend/plugins/wp-better-emails/faq/) for usage).
+* Add your own tags with WordPress filters (see [FAQ](http://wordpress.org/extend/plugins/wp-better-emails/faq/) for usage).
 * The default template is included as an HTML file in the plugin folder, feel free to edit it with your favorite editor.
 * Clean uninstall process, doesn't leave some useless data in your database when deleted, you can easily give it a try !
 
 = Example usages : =
 
 * Brand your emails to your website or client website
-* Add some ads/sponsored links to every email sent with wordpress
+* Add some ads/sponsored links to every email sent with WordPress
 * Include some banners to promote a special event or feature of your website
 
 
@@ -76,9 +76,9 @@ WP Better Emails is also available on [GitHub](https://github.com/nlemoine/WP-Be
 
 1. Extract and upload the `wp-better-emails` folder to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in the WordPress admin panel
-3. (Optional) Set a sender email and name, if none, wordpress defaults will be used : 'wordpress@yourdomain.com' and 'Your Blog Title'
+3. (Optional) Set a sender email and name, if none, WordPress defaults will be used : 'wordpress@yourdomain.com' and 'Your Blog Title'
 4. (Optional) Edit your own email template. See the screenshot tab to have a look at the default template
-5. Every email going out from your Wordpress Blog (notifications, lost password, etc.) looks better now !
+5. Every email going out from your WordPress Blog (notifications, lost password, etc.) looks better now !
 
 == Upgrade Notice ==
 
@@ -93,24 +93,24 @@ If you have customized the HTML template and want to keep it, just update.
 
 = Automatic update =
 
-Just use the Wordpress automatic plugin update system
+Just use the WordPress automatic plugin update system
 
 == Frequently Asked Questions ==
 
-= What if recipient can't read HTML emails ? =
+= What if recipient can't read HTML emails? =
 
 WP Better Emails sends all emails in both formats ('multipart', i.e. HTML and plain text) so that emails can be displayed in every email client.
 
-= Why are the emails still sent in plain text format ? =
+= Why are the emails still sent in plain text format? =
 
 Be sure to include the **%content%** tag in your template. WP Better Emails wrap the content with the template, if no tag
 is found, sending HTML emails is automatically desactivated.
 
-= How does WP Better Emails interact with others plugins ? =
+= How does WP Better Emails interact with others plugins? =
 
-WP Better Emails wraps every "text/plain" email sent with the Wordpress function `wp_mail()`.
+WP Better Emails wraps every "text/plain" email sent with the WordPress function `wp_mail()`.
 
-= I totally messed up with the template, how can I get the original one ? =
+= I totally messed up with the template, how can I get the original one? =
 
 Just delete and reinstall the plugin from the admin panel.
 
@@ -118,7 +118,7 @@ Just delete and reinstall the plugin from the admin panel.
 
 WP Better Emails only wraps "text/plain" emails. By default, SB Welcome Editor sends email as HTML, with no style but as "text/html". Be sure to set the SB Welcome Editor format option to "text".
 
-= How can I add my own tags ? =
+= How can I add my own tags? =
 
 You can filter the tags array and add your replacements. Let's say you want to randomly display some sponsored links somewhere in your email template:
 
@@ -197,7 +197,7 @@ You can place this function in your functions.php theme file or in a plugin.
 
 * New translation: Farsi
 * New translation: Russian
-* Updated transaltion: German
+* Updated translation: German
 
 = 0.2.6 =
 
@@ -220,7 +220,7 @@ You can place this function in your functions.php theme file or in a plugin.
 
 = 0.2.3 =
 
- * Fixed 3.3 beta compatilibity
+ * Fixed 3.3 beta compatibility
  * Fixed 3.3 help panel trigger
 
 = 0.2.2 =
