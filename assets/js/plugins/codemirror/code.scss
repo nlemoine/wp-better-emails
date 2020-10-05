@@ -1,0 +1,10 @@
+@import '../../../../node_modules/codemirror/lib/codemirror.css';
+@import '../../../../node_modules/codemirror/theme/monokai.css';
+
+html,body { height:100%; }
+body {
+	margin: 0;
+}
+.CodeMirror {
+	height: 100%;
+}

@@ -1,9 +1,9 @@
 === WP Better Emails ===
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=7Q49VJQNRCQ8E&lc=FR&item_name=ArtyShow&item_number=wp%2dbetter%2demails&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=7Q49VJQNRCQ8E&lc=FR&item_name=wp-better-emails&item_number=wp%2dbetter%2demails&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 Tags: email, emails, html emails, templates, notification, wp_mail, wpmu, multisite, html template
-Requires at least: 2.8
-Tested up to: 4.4.1
-Stable tag: 0.3
+Requires at least: 4.8
+Tested up to: 5.5.1
+Stable tag: 0.4
 
 Adds a customizable good looking HTML template to all WP default text/plain emails and lets you set
  a custom sender name and email address.
@@ -151,6 +151,12 @@ You can place this function in your functions.php theme file or in a plugin.
 5. Help tab with information about available tags.
 
 == Changelog ==
+
+= 0.4 =
+
+* Fix deprecation notices
+* Fix TinyMCE plugins
+* Remove live preview
 
 = 0.3 =
 

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="code.css" />
+    <script>
+      var codeMirrorInstance, editor;
+      function submit() {
+        codeMirrorInstance && editor.setContent(codeMirrorInstance.getValue());
+      }
+    </script>
+    <script src="code.js"></script>
+  </head>
+  <body></body>
+</html>

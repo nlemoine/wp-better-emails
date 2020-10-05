@@ -1,0 +1,39 @@
+{
+  "name": "wp-better-emails",
+  "version": "1.0.0",
+  "description": "=== WP Better Emails === Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=7Q49VJQNRCQ8E&lc=FR&item_name=ArtyShow&item_number=wp%2dbetter%2demails&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted Tags: email, emails, html emails, templates, notification, wp_mail, wpmu, multisite, html template Requires at least: 2.8 Tested up to: 4.4.1 Stable tag: 0.3",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nlemoine/wp-better-emails.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nlemoine/wp-better-emails/issues"
+  },
+  "homepage": "https://github.com/nlemoine/wp-better-emails#readme",
+  "dependencies": {
+    "codemirror": "^5.58.1",
+    "laravel-mix": "^5.0.5",
+    "tinymce": "4-latest",
+    "tinymce-codemirror": "git+https://gitlab.com/tinymce-plugins/tinymce-codemirror.git#master"
+  },
+  "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch",
+    "watch-poll": "npm run watch -- --watch-poll",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --disable-host-check --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "resolve-url-loader": "^3.1.1",
+    "rimraf": "^3.0.2",
+    "sass": "^1.26.11",
+    "sass-loader": "^10.0.2",
+    "vue-template-compiler": "^2.6.12"
+  }
+}

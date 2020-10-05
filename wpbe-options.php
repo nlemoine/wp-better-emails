@@ -1,5 +1,6 @@
 <div class="wrap">
-	<h2><?php _e('Email settings', 'wp-better-emails'); ?></h2>
+
+	<h1><?php _e('Email settings', 'wp-better-emails'); ?></h1>
 
 	<form method="post" action="options.php" id="wpbe_options_form">
 		<?php settings_fields('wpbe_full_options'); ?>
@@ -19,10 +20,9 @@
 		</table>
 
 		<!-- Template -->
-		<h3 class="wpbe_title"><?php _e('HTML Template', 'wp-better-emails'); ?>
-		<?php if( version_compare($wp_version, '3.1', '>') ): ?>
-			<a class="button" title="<?php esc_attr_e('Live template preview', 'wp-better-emails'); ?>" id="wpbe_preview_template" href="<?php echo plugins_url('preview.html?keepThis=true&TB_iframe=true&height=400&width=700', __FILE__); ?>"><?php _e('Live preview', 'wp-better-emails'); ?></a>
-		<?php endif; ?>
+		<h3 class="wpbe_title">
+			<?php _e('HTML Template', 'wp-better-emails'); ?>
+			<!-- <a class="button" title="<?php esc_attr_e('Live template preview', 'wp-better-emails'); ?>" id="wpbe_preview_template" href="<?php echo plugins_url('preview.html?keepThis=true&TB_iframe=true&height=400&width=700', __FILE__); ?>"><?php _e('Live preview', 'wp-better-emails'); ?></a> -->
 		</h3>
 		<p><?php _e('Edit the HTML template if you want to customize it. You might have a look at the <a href="#" class="wpbe_help">help tab</a> for further information.', 'wp-better-emails'); ?></p>
 		<div id="wpbe_template_container">
@@ -32,9 +32,7 @@
 		<!-- Plain-text template -->
 		<h3 class="wpbe_title"><?php _e('Plain-text Template', 'wp-better-emails'); ?></h3>
 		<p><?php _e('Edit the plain-text template if you want to customize it. You might have a look at the <a href="#" class="wpbe_help">help tab</a> for further information.', 'wp-better-emails'); ?></p>
-		<div id="wpbe_plaintext_template_container">
-			<?php $this->plaintext_template_editor(); ?>
-		</div>
+		<div id="wpbe_plaintext_template_container"><?php $this->plaintext_template_editor(); ?></div>
 
 		<!-- Preview -->
 		<h3 class="wpbe_title"><?php _e('Preview', 'wp-better-emails'); ?></h3>
@@ -60,7 +58,7 @@
 	<div id="wpbe_support">
 		<h3><?php _e('Support & bug report', 'wp-better-emails'); ?></h3>
 		<p><?php printf(__('If you have any idea to improve this plugin or any bug to report, please email me at : <a href="%1$s">%2$s</a>', 'wp-better-emails'), 'mailto:wpbetteremails@helloni.co?subject=[wp-better-emails]', 'wpbetteremails@helloni.co'); ?></p>
-		<?php $donation_link = 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=7Q49VJQNRCQ8E&lc=FR&item_name=ArtyShow&item_number=wp%2dbetter%2demails&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted'; ?>
+		<?php $donation_link = 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=7Q49VJQNRCQ8E&lc=FR&item_name=wp-better-emails&item_number=wp%2dbetter%2demails&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted'; ?>
 		<p><?php printf(__('You like this plugin ? You use it in a business context ? Please, consider a <a href="%s" target="_blank" rel="external">donation</a>.', 'wp-better-emails'), $donation_link ); ?></p>
 		<p><?php printf(__('You can still provide some support by <a href="%1$s" target="_blank">voting for it</a> and/or says that <a href="%2$s" target="_blank">it works</a> for your WordPress installation on the official WordPress plugins repository.', 'wp-better-emails'), 'http://wordpress.org/plugins/wp-better-emails/', 'http://wordpress.org/plugins/wp-better-emails/'); ?></p>
 	</div>
