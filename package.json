@@ -16,7 +16,7 @@
   "dependencies": {
     "codemirror": "^5.58.1",
     "laravel-mix": "^5.0.5",
-    "tinymce": "4-latest",
+    "tinymce": "^4.9.11",
     "tinymce-codemirror": "git+https://gitlab.com/tinymce-plugins/tinymce-codemirror.git#master"
   },
   "scripts": {
